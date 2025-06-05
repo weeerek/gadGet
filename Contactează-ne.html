@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactează-ne</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+        display: flex;
+        align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px; 
+        }
+        .search-bar {
+            width: 280px;
+        }
+        .nav-item {
+            color: #8B8B8B;
+        }
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .nav-icons a {
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+        }
+        .language {
+            display: flex;
+            flex-direction: column;
+        }
+        .language .fw-bold {
+            background-color: transparent;
+            border: none;
+        }
+        .under-header {
+            background-color: #2e2e2e;
+            height: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 350px;
+            color: #bfbfbf;
+            font-size: 16px;
+        }
+        .separator {
+            width: 1px;
+            height: 25px;
+            background-color: #bfbfbf;
+        }
+        .under-header p {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+
+
+        
+        .contact .container {
+  padding: 60px 20px;
+}
+.name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.name img {
+  width: 24px;
+  height: 24px;
+}
+.col-4 p, .col-4 h5 {
+  margin-bottom: 10px;
+}
+.r1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.r1 input {
+  flex: 1 1 30%;
+  min-width: 200px;
+}
+.form-control {
+  margin-bottom: 15px;
+}
+button.btn {
+  padding: 10px 25px;
+  color: #fff;
+  border: none;
+}
+.btn.bg-black {
+  background-color: #000;
+}
+.btn.bg-black:hover {
+  background-color: #333;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+        footer ul li { 
+            margin-bottom: 0.5rem;
+         }
+
+
+        
+  
+         @media (max-width: 992px) {
+          .search-bar, .nav, .nav-icons {
+                width: 100%;
+            }
+            header .container {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+            }
+            .nav {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 0;
+            }
+            .nav-icons {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            }
+            .under-header {
+            flex-direction: column;
+            gap: 10px;
+            height: auto;
+            padding: 10px 0;
+            }
+          }
+
+@media (max-width: 768px) {
+  .container {
+        flex-direction: column; 
+        align-items: center;
+        padding: 0 10px;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .search-bar {
+        width: 90%; 
+        margin-bottom: 10px;
+    }
+    .nav {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .nav-item {
+        width: 100%;
+    }
+    .nav-link {
+        padding: 5px 0;
+    }
+    .nav-icons {
+        margin-top: 10px;
+        justify-content: center; 
+        gap: 8px;
+    }
+    .under-header {
+        flex-direction: column; 
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+        font-size: 14px; 
+    }
+    .under-header .separator {
+        display: none;
+    }
+
+    footer .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .col-md-4,
+    footer .col-md-3 {
+        margin-bottom: 20px;
+    }
+    footer .d-flex.gap-3 {
+        justify-content: center; 
+    }
+    footer .col-md-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .d-flex.align-items-center.mb-3 {
+        justify-content: center; 
+    }
+  .r1 {
+    flex-direction: column;
+  }
+  .col-4, .col-8 {
+    width: 100%;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            
+          <div class="logo">
+            <img src="https://i.pinimg.com/736x/fe/e3/0a/fee30ae2f127eaea8a5f1d01d80a5b78.jpg" alt="">
+            <h1 class="name text-black">gadGet</h1>
+        </div>
+            
+            <div class="input-group search-bar">
+                <input type="text" class="form-control" 
+                data-lang-ro-placeholder="Caută..." 
+                data-lang-fr-placeholder="Rechercher..." 
+                placeholder="Caută...">
+                     </div>
+            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Acasă" data-lang-fr="Accueil" onclick="window.location.href='index.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Catalog" data-lang-fr="Catalogue" onclick="window.location.href='Pagină Produse.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Despre" data-lang-fr="À propos" onclick="window.location.href='Despre.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link text-black" href="#" data-lang-ro="Contactează-ne" data-lang-fr="Contactez-nous"></a></li>
+                  </ul>
+            </nav>
+            
+            <div class="nav-icons">
+                <a href="#"><i class="bi bi-heart" onclick="window.location.href='Wishlist.html'"></i></a>
+                <a href="#"><i class="bi bi-cart" onclick="window.location.href='Coş de Cumpărături.html'"></i></a>
+                <a href="#"><i class="bi bi-person" onclick="window.location.href='Înregistrează-te.html'"></i></a>
+                <div class="language">
+                    <button onclick="setLanguage('ro')" class="fw-bold">RO</button>
+                    <button onclick="setLanguage('fr')" class="fw-bold">FR</button>
+                  </div>
+                  
+            </div>
+        </div>
+    </header>
+
+    <!-- Under Header -->
+    <section class="under-header">
+        <p data-lang-ro="Telefoane" data-lang-fr="Téléphones"><i class="bi bi-phone"></i></p>
+        <div class="separator"></div>
+        <p data-lang-ro="Tablete" data-lang-fr="Tablettes"><i class="bi bi-tablet"></i></p>
+      </section>
+
+
+
+<!-- contact -->
+ <section class="contact">
+    <div class="container">
+    <div class="row justify-content-evenly">
+      <div class="col-12 col-md-4 mb-4">
+        <div class="name">
+          <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Telefon">
+          <h5 data-lang-ro="Sunați-ne" data-lang-fr="Appelez-nous"></h5>
+        </div>
+        <p data-lang-ro="Suntem disponibili 24/7, 7 zile pe săptămână." data-lang-fr="Nous sommes disponibles 24h/24 et 7j/7."></p>
+        <p><strong data-lang-ro="Telefon:" data-lang-fr="Téléphone"></strong> +373 (68) 296602</p>
+        <hr>
+        <div class="name">
+          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email">
+          <h5 data-lang-ro="Scrieți-ne" data-lang-fr="MAIL"></h5>
+        </div>
+        <p data-lang-ro="Completați formularul nostru și vă vom contacta în termen de 24 de ore." data-lang-fr="Remplissez notre formulaire et nous vous contacterons dans les 24 heures."></p>
+        <p><strong>Email:</strong> contact@7cyber.com</p>
+      </div>
+  
+      <div class="col-12 col-md-8">
+        <div class="r1">
+          <input type="text" class="form-control" data-lang-ro-placeholder="Numele dvs. *" data-lang-fr-placeholder="Votre nom *" placeholder="Numele dvs. *">
+          <input type="text" class="form-control" data-lang-ro-placeholder="Email-ul dvs. *" data-lang-fr-placeholder="Votre email *" placeholder="Email-ul dvs. *">
+          <input type="text" class="form-control" data-lang-ro-placeholder="Numărul dvs. de telefon *" data-lang-fr-placeholder="Votre numéro de téléphone *" placeholder="Numărul dvs. de telefon *">
+        </div>
+        <textarea class="form-control" rows="5" data-lang-ro-placeholder="Mesajul dvs. *" data-lang-fr-placeholder="Votre message *" placeholder="Mesajul dvs. *"></textarea>
+        <div class="text-end mt-3">
+          <button class="btn bg-black" onclick="validateForm()" data-lang-ro="Trimiteți mesajul" data-lang-fr="Envoyer le message"></button>
+        </div>
+      </div>
+    </div>
+</div>
+  </section>
+
+
+
+
+     <!-- footer -->
+     <footer class="bg-black text-white py-5">
+        <div class="container">
+            <div class="row justify-content-between align-items-start">
+                <div class="col-md-4 mb-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <img src="https://i.pinimg.com/736x/86/a9/94/86a9946861d76198d479423669a341a5.jpg" alt="Logo" width="30" class="me-2">
+                    <h4 class="m-0 fw-bold" data-lang-ro="gadGet" data-lang-fr="gadGet"></h4>
+                </div>
+                    <p data-lang-ro="Suntem un magazin online specializat în telefoane și tablete. Oferim produse originale, livrare rapidă și suport de încredere pentru fiecare client." 
+                       data-lang-fr="Nous sommes une boutique en ligne spécialisée dans les téléphones et tablettes. Nous offrons des produits originaux, une livraison rapide et un support fiable pour chaque client.">
+                    </p>
+                    <div class="contact">
+                      <h4 data-lang-ro="Contacte" data-lang-fr="Contacts"></h4>
+                      <p data-lang-ro="Telefon: +373 (68) 296602" data-lang-fr="Téléphone: +373 (68) 296602"></p>
+                      <p>Email: contact@7cyber.com</p>
+                  </div>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-tiktok fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold" data-lang-ro="Servicii" data-lang-fr="Services"></h5>
+                    <ul class="list-unstyled mt-3">
+                        <li data-lang-ro="Oferte speciale și reduceri" data-lang-fr="Offres spéciales et réductions"></li>
+                        <li data-lang-ro="Carduri cadou electronice" data-lang-fr="Cartes cadeaux électroniques"></li>
+                        <li data-lang-ro="Finanțare în rate fără dobândă" data-lang-fr="Financement en plusieurs fois sans intérêt"></li>
+                        <li data-lang-ro="Garanție extinsă și service autorizat" data-lang-fr="Garantie étendue et service agréé"></li>
+                        <li data-lang-ro="Facturare online și cont client" data-lang-fr="Facturation en ligne et compte client"></li>
+                        <li data-lang-ro="Metode multiple de plată" data-lang-fr="Modes de paiement multiples"></li>
+                    </ul>
+                </div>
+    
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold" data-lang-ro="Asistență pentru clienți" data-lang-fr="Assistance client"></h5>
+                    <ul class="list-unstyled mt-3">
+                        <li data-lang-ro="Urmărirea comenzii" data-lang-fr="Suivi de commande"></li>
+                        <li data-lang-ro="Informații despre livrare" data-lang-fr="Informations sur la livraison"></li>
+                        <li data-lang-ro="Politica de retur și schimb" data-lang-fr="Politique de retour et d’échange"></li>
+                        <li data-lang-ro="Garanția produselor" data-lang-fr="Garantie des produits"></li>
+                        <li data-lang-ro="Întrebări frecvente (FAQ)" data-lang-fr="FAQ (Foire Aux Questions)"></li>
+                        <li data-lang-ro="Termeni și condiții de utilizare a site-ului" data-lang-fr="Conditions générales d’utilisation du site"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+
+
+
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      
+        
+      <script>
+      
+    // 1.ro/fr
+  function setLanguage(lang) {
+    const elements = document.querySelectorAll('[data-lang-ro]');
+    elements.forEach(el => {
+      el.textContent = el.getAttribute(`data-lang-${lang}`);
+    });
+
+    const inputElements = document.querySelectorAll('[data-lang-ro-placeholder]');
+    inputElements.forEach(input => {
+      input.placeholder = input.getAttribute(`data-lang-${lang}-placeholder`);
+    });
+
+    localStorage.setItem('lang', lang); 
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem('lang') || 'ro';
+    setLanguage(savedLang);
+  });
+       
+  // 2.
+  function validateForm() {
+    const name = document.querySelector("[placeholder='Numele dvs. *']").value.trim();
+    const email = document.querySelector("[placeholder='Email-ul dvs. *']").value.trim();
+    const phone = document.querySelector("[placeholder='Numărul dvs. de telefon *']").value.trim();
+    const message = document.querySelector("[placeholder='Mesajul dvs. *']").value.trim();
+
+    if (!name || !email || !phone || !message) {
+        alert("Completați formularul înainte de a trimite!");
+        return;
+    }
+
+    alert("Mesajul a fost trimis cu succes!");
+}
+
+</script>
+</body>
+</html>

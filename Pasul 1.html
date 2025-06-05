@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasul 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+       
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+        .search-bar {
+            width: 280px;
+        }
+        .nav-item{
+        color: #8B8B8B;
+        }
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .nav-icons a {
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+        }
+        .language{
+            display: flex;
+        flex-direction: column;
+        }
+        .language .fw-bold{
+            background-color: transparent;
+            border: none;
+        }
+        
+
+
+        .under-header {
+    background-color: #2e2e2e;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 350px;
+    color: #bfbfbf;
+    font-size: 16px;
+  }
+
+  .separator {
+    width: 1px;
+    height: 25px;
+    background-color: #bfbfbf;
+  }
+
+  .under-header p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+
+
+
+  .steps{
+    padding-top: 30px;
+  }
+
+  .steps .step-title {
+    padding-left: 15px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.steps .step-desc {
+    padding-left: 15px;
+    font-size: 22px;
+}
+
+.steps .dots {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #000000, #E6E6E6);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+
+
+.address h4{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.address-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    gap: 12px;
+}
+
+.address-option input.radio {
+  margin-right: 12px; /* sau cât dorești */
+}
+
+
+.address-option.selected {
+    border-color: #000; /* Evidențiază adresa selectată */
+}
+
+.address-details {
+    flex-grow: 1;
+}
+
+.title{
+    padding-right: 15px;
+}
+.tag {
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    width: 55px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px; 
+    justify-content: center;
+}
+
+.address-details p {
+    margin: 5px 0;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-icon, .delete-icon {
+    font-size: 18px;
+    cursor: pointer;
+    color: #555;
+}
+
+.edit-icon:hover {
+    color: #007bff; /* Albastru la hover */
+}
+
+.delete-icon:hover {
+    color: #dc3545; /* Roșu la hover */
+}
+
+.add-address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.plus-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    gap: 20px;
+    padding-top: 34px;
+    padding-bottom: 60px;
+}
+
+.btn-outline-dark {
+    border-color: #000;
+    color: #000;
+}
+
+.btn-dark {
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+
+  footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    .search-bar {
+        width: 200px; 
+    }
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    .nav-link {
+        padding: 8px 10px;
+    }
+    .nav-icons {
+        gap: 10px;
+    }
+    .under-header {
+        flex-direction: column; 
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+    }
+    .under-header .separator {
+        display: none; 
+    }
+    
+
+    
+    footer .col-md-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; 
+    }
+    footer .d-flex.align-items-center.mb-3 {
+        justify-content: center; 
+    }
+}
+
+
+
+
+
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column; 
+        align-items: center;
+        padding: 0 10px;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .search-bar {
+        width: 90%; 
+        margin-bottom: 10px;
+    }
+    .nav {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .nav-item {
+        width: 100%;
+    }
+    .nav-link {
+        padding: 5px 0;
+    }
+    .nav-icons {
+        margin-top: 10px;
+        justify-content: center; 
+        gap: 8px;
+    }
+    .under-header {
+        flex-direction: column; 
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+        font-size: 14px; 
+    }
+    .under-header .separator {
+        display: none;
+    }
+
+
+    .steps .row {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.step-box {
+    justify-content: center;
+    text-align: center;
+}
+
+.dots {
+    display: none;
+}
+
+.buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding-top: 50px;
+}
+
+
+  .address-option {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .address-option input.radio {
+    margin-bottom: 10px;
+  }
+
+  .address-details {
+    width: 100%;
+  }
+
+  .icons {
+    margin-top: 10px;
+    justify-content: flex-start;
+  }
+
+
+  .add-address {
+    text-align: center;
+  }
+
+    .step-title,
+  .step-desc {
+    text-align: center;
+    padding-left: 0 !important;
+  }
+    
+
+
+    footer .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .col-md-4,
+    footer .col-md-3 {
+        margin-bottom: 20px;
+    }
+    footer .d-flex.gap-3 {
+        justify-content: center; 
+    }
+    footer .col-md-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .d-flex.align-items-center.mb-3 {
+        justify-content: center; 
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            
+            <div class="logo">
+                <img src="https://i.pinimg.com/736x/fe/e3/0a/fee30ae2f127eaea8a5f1d01d80a5b78.jpg" alt="">
+                <h1 class="name text-black">gadGet</h1>
+            </div>
+            
+            <div class="input-group search-bar">
+                <input type="text" class="form-control" 
+                data-lang-ro-placeholder="Caută..." 
+                data-lang-fr-placeholder="Rechercher..." 
+                placeholder="Caută...">
+                     </div>
+            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Acasă" data-lang-fr="Accueil" onclick="window.location.href='index.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Catalog" data-lang-fr="Catalogue" onclick="window.location.href='Pagină Produse.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Despre" data-lang-fr="À propos" onclick="window.location.href='Despre.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Contactează-ne" data-lang-fr="Contactez-nous" onclick="window.location.href='Contactează-ne.html'"></a></li>
+                  </ul>
+            </nav>
+            
+            <div class="nav-icons">
+                <a href="#"><i class="bi bi-heart" onclick="window.location.href='Wishlist.html'"></i></a>
+                <a href="#"><i class="bi bi-cart" onclick="window.location.href='Coş de Cumpărături.html'"></i></a>
+                <a href="#"><i class="bi bi-person" onclick="window.location.href='Înregistrează-te.html'"></i></a>
+                <div class="language">
+                    <button onclick="setLanguage('ro')" class="fw-bold">RO</button>
+                    <button onclick="setLanguage('fr')" class="fw-bold">FR</button>
+                  </div>
+                  
+            </div>
+        </div>
+    </header>
+
+    <!-- Under Header -->
+    <section class="under-header">
+        <p data-lang-ro="Telefoane" data-lang-fr="Téléphones"><i class="bi bi-phone"></i></p>
+        <div class="separator"></div>
+        <p data-lang-ro="Tablete" data-lang-fr="Tablettes"><i class="bi bi-tablet"></i></p>
+      </section>
+
+
+
+
+<!-- steps -->
+<section class="steps">
+    <div class="container">
+        <div class="row d-flex justify-content-center text-left">
+            <div class="col-2">
+                <div class="step-box d-flex">
+                    <i class="bi bi-geo-alt fs-5 step-icon" id="step1"></i>
+                                        <div class="text">
+                        <p class="step-title" data-lang-ro="Pasul 1" data-lang-fr="Étape 1"></p>
+                        <p class="step-desc" data-lang-ro="Adresa" data-lang-fr="Adresse"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="dots">...............</div>
+            </div>
+            <div class="col-2">
+                <div class="step-box d-flex">
+                    <i class="bi bi-truck fs-5 step-icon" id="step2"></i> 
+                                        <div class="text">
+                        <p class="step-title" data-lang-ro="Pasul 2" data-lang-fr="Étape 2"></p>
+                        <p class="step-desc" data-lang-ro="Transport" data-lang-fr="Transport"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="dots">...............</div>
+            </div>
+            <div class="col-2">
+                <div class="step-box d-flex">
+                    <i class="bi bi-credit-card fs-5 step-icon" id="step3"></i>
+                                        <div class="text">
+                        <p class="step-title" data-lang-ro="Pasul 3" data-lang-fr="Étape 3"></p>
+                        <p class="step-desc" data-lang-ro="Plată" data-lang-fr="Paiement"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<!-- address -->
+<section class="address">
+    <div class="container">
+        <h4 data-lang-ro="Selectează Adresa" data-lang-fr="Sélectionnez l'adresse"></h4>
+        
+        <!-- Prima adresă -->
+        <div class="address-option selected">
+            <input type="radio" class="radio" name="address" id="address1" checked>
+            <label for="address1"></label>
+            <div class="address-details">
+                <div class="title-tag d-flex">
+                    <p class="title">Thornridge</p>
+                    <span class="tag" data-lang-ro="CASĂ" data-lang-fr="MAISON"></span>
+                </div>
+                <p>2118 Thornridge Cir, Syracuse, Connecticut 35624</p>
+                <p>(209) 555-0104</p>
+            </div>
+            <div class="icons">
+                <i class="bi bi-pencil-square edit-icon"></i>
+                <i class="bi bi-x-circle delete-icon"></i>
+            </div>
+        </div>
+
+        <!-- A doua adresă -->
+        <div class="address-option">
+            <input type="radio" class="radio" name="address" id="address2">
+            <label for="address2"></label>
+            <div class="address-details">
+                <div class="title-tag d-flex">
+                    <p class="title">Headoffice</p>
+                    <span class="tag" data-lang-ro="OFICIU" data-lang-fr="BUREAU"></span>
+                </div>
+                <p>2715 Ash Dr, San Jose, South Dakota 83475</p>
+                <p>(704) 555-0127</p>
+            </div>
+            <div class="icons">
+                <i class="bi bi-pencil-square edit-icon"></i>
+                <i class="bi bi-x-circle delete-icon"></i>
+            </div>
+        </div>
+
+        <!-- Adaugă o adresă nouă -->
+        <div class="add-address">
+            <i class="bi bi-plus-circle plus-icon"  onclick="showUnavailableAlert()"></i>
+            <p data-lang-ro="Adaugă o Adresă Nouă" data-lang-fr="Ajouter une Nouvelle Adresse"></p>
+        </div>
+
+        <!-- Butoane pe dreapta -->
+        <div class="buttons">
+            <button class="btn btn-outline-dark" data-lang-ro="Înapoi" data-lang-fr="Dos" onclick="window.location.href='Coş de Cumpărături.html'"></button>
+            <button class="btn btn-dark" data-lang-ro="Înainte" data-lang-fr="Avant" onclick="window.location.href='Pasul 2.html'"></button>
+        </div>
+    </div>
+</section>
+
+     <!-- footer -->
+     <footer class="bg-black text-white py-5">
+        <div class="container">
+            <div class="row justify-content-between align-items-start">
+                <div class="col-md-4 mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="https://i.pinimg.com/736x/86/a9/94/86a9946861d76198d479423669a341a5.jpg" alt="Logo" width="30" class="me-2">
+                        <h4 class="m-0 fw-bold" data-lang-ro="gadGet" data-lang-fr="gadGet"></h4>
+                    </div>
+                    <p data-lang-ro="Suntem un magazin online specializat în telefoane și tablete. Oferim produse originale, livrare rapidă și suport de încredere pentru fiecare client." 
+                       data-lang-fr="Nous sommes une boutique en ligne spécialisée dans les téléphones et tablettes. Nous offrons des produits originaux, une livraison rapide et un support fiable pour chaque client.">
+                    </p>
+                    <div class="contact">
+                        <h4 data-lang-ro="Contacte" data-lang-fr="Contacts"></h4>
+                        <p data-lang-ro="Telefon: +373 (68) 296602" data-lang-fr="Téléphone: +373 (68) 296602"></p>
+                        <p>Email: contact@7cyber.com</p>
+                    </div>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-tiktok fs-5"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                    </div>
+                </div>
+    
+                <div class="col-md-3 mb-4">
+                    <h5 class="fw-bold" data-lang-ro="Servicii" data-lang-fr="Services"></h5>
+                    <ul class="list-unstyled mt-3">
+                        <li data-lang-ro="Oferte speciale și reduceri" data-lang-fr="Offres spéciales et réductions"></li>
+                        <li data-lang-ro="Carduri cadou electronice" data-lang-fr="Cartes cadeaux électroniques"></li>
+                        <li data-lang-ro="Finanțare în rate fără dobândă" data-lang-fr="Financement en plusieurs fois sans intérêt"></li>
+                        <li data-lang-ro="Garanție extinsă și service autorizat" data-lang-fr="Garantie étendue et service agréé"></li>
+                        <li data-lang-ro="Facturare online și cont client" data-lang-fr="Facturation en ligne et compte client"></li>
+                        <li data-lang-ro="Metode multiple de plată" data-lang-fr="Modes de paiement multiples"></li>
+                    </ul>
+                </div>
+    
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold" data-lang-ro="Asistență pentru clienți" data-lang-fr="Assistance client"></h5>
+                    <ul class="list-unstyled mt-3">
+                        <li data-lang-ro="Urmărirea comenzii" data-lang-fr="Suivi de commande"></li>
+                        <li data-lang-ro="Informații despre livrare" data-lang-fr="Informations sur la livraison"></li>
+                        <li data-lang-ro="Politica de retur și schimb" data-lang-fr="Politique de retour et d’échange"></li>
+                        <li data-lang-ro="Garanția produselor" data-lang-fr="Garantie des produits"></li>
+                        <li data-lang-ro="Întrebări frecvente (FAQ)" data-lang-fr="FAQ (Foire Aux Questions)"></li>
+                        <li data-lang-ro="Termeni și condiții de utilizare a site-ului" data-lang-fr="Conditions générales d’utilisation du site"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+    
+    
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // 1.ro/fr
+    function setLanguage(lang) {
+    const elements = document.querySelectorAll('[data-lang-ro]');
+    elements.forEach(el => {
+      el.textContent = el.getAttribute(`data-lang-${lang}`);
+    });
+    
+    const inputElements = document.querySelectorAll('[data-lang-ro-placeholder]');
+    inputElements.forEach(input => {
+      input.placeholder = input.getAttribute(`data-lang-${lang}-placeholder`);
+    });
+    
+    localStorage.setItem('lang', lang);
+    }
+    
+    document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem('lang') || 'ro';
+    setLanguage(savedLang);
+    });
+
+    function showUnavailableAlert() {
+    alert("Funcția dată nu funcționează momentan!");
+}
+
+
+document.getElementById("continue-address").addEventListener("click", function () {
+  const address = document.getElementById("input-address").value;
+  localStorage.setItem("userAddress", address);
+  window.location.href = "Pasul 2.html"; 
+});
+
+
+
+    </script>
+    
+    </body>
+    </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+<main class="container mx-auto px-4 py-8">
+    <h2 class="text-2xl font-bold mb-4">Favoritele mele</h2>
+    <div id="wishlistContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+    <p id="emptyMessage" class="text-gray-600 text-center text-lg hidden">Nu ai produse în wishlist.</p>
+    <button id="backToProductsBtn" class="home text-white bg-black px-4 py-2 rounded mt-6" data-lang-ro="Înapoi la pagina de start" data-lang-fr="Retour à la page d'accueil"></button>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const wishlistContainer = document.getElementById("wishlistContainer");
+        const emptyMessage = document.getElementById("emptyMessage");
+        const backToProductsBtn = document.getElementById("backToProductsBtn"); 
+
+        function renderWishlist() {
+            wishlistContainer.innerHTML = '';
+
+            const storedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+            if (storedWishlist.length === 0) {
+                emptyMessage.classList.remove("hidden");
+            } else {
+                emptyMessage.classList.add("hidden"); 
+                storedWishlist.forEach(p => {
+                    const card = document.createElement("div");
+                    card.className = "bg-white rounded-lg shadow p-4 flex flex-col items-center text-center";
+                    card.innerHTML = `
+                        <img src="${p.image}" class="w-32 h-32 object-contain mb-2">
+                        <h3 class="text">${p.name}</h3>
+                        <p class="text-black font-bold">${p.price}</p>
+                        <button class="bg-black text-white px-3 py-1 rounded mt-2 remove-from-wishlist" data-id="${p.id}">Șterge</button>
+                    `;
+                    wishlistContainer.appendChild(card);
+                });
+            }
+        }
+
+        renderWishlist();
+
+        wishlistContainer.addEventListener('click', (event) => {
+            if (event.target.classList.contains('remove-from-wishlist')) {
+                const productIdToRemove = event.target.getAttribute('data-id');
+                let currentWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+                const updatedWishlist = currentWishlist.filter(item => item.id !== productIdToRemove);
+                localStorage.setItem("wishlist", JSON.stringify(updatedWishlist));
+
+                renderWishlist();
+            }
+        });
+
+        backToProductsBtn.addEventListener('click', () => {
+            window.location.href = 'index.html'; 
+        });
+
+        function setLanguage(lang) {
+            const buttonTextRo = backToProductsBtn.getAttribute('data-lang-ro');
+            const buttonTextFr = backToProductsBtn.getAttribute('data-lang-fr');
+            backToProductsBtn.textContent = (lang === 'ro') ? buttonTextRo : buttonTextFr;
+        }
+
+        const savedLang = localStorage.getItem('lang') || 'ro';
+        setLanguage(savedLang);
+    });
+</script>
+</body>
+</html>

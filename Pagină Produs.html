@@ -1,0 +1,2468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagină Produs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+        .search-bar {
+            width: 280px;
+        }
+        .nav-item{
+        color: #8B8B8B;
+        }
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .nav-icons a {
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+        }
+        .language{
+            display: flex;
+        flex-direction: column;
+        }
+        .language .fw-bold{
+            background-color: transparent;
+            border: none;
+        }
+        
+
+
+        .under-header {
+    background-color: #2e2e2e;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 350px;
+    color: #bfbfbf;
+    font-size: 16px;
+  }
+
+  .separator {
+    width: 1px;
+    height: 25px;
+    background-color: #bfbfbf;
+  }
+
+  .under-header p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+
+
+
+
+  .product {
+    padding: 40px;
+    background-color: #fff;
+}
+
+.photos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.photos img {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.main-photo img {
+    width: 100%;
+    border-radius: 10px;
+    height: 600px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.current-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+.old-price {
+    font-size: 20px;
+    text-decoration: line-through;
+    color: #777;
+}
+.colors {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.memory .btn {
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.btn-selected {
+    background-color: #000;
+    color: #fff;
+}
+
+    .memory .btn{
+        background-color: transparent;
+        color: #d5d5d5;
+        border-color: #d5d5d5;
+        width: 94px;
+    }
+    .memory .btn-selected{
+        background-color: #000;
+        color: #fff;
+        border-color: #000;
+        width: 94px;
+    }
+
+    .btn-dark{
+        background-color: #000;
+    }
+    .optional {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.spec-item {
+    flex: 1;
+    min-width: 150px;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.spec-item:hover {
+    transform: translateY(-3px);
+}
+
+.spec-item img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 10px;
+    filter: grayscale(100%);
+}
+
+.spec-item .name {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 4px;
+}
+
+.spec-item p:last-of-type {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+}
+
+
+
+
+.b-i {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.benefit img {
+    width: 40px;
+    height: auto;
+}
+
+.description {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #555;
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+
+}
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    width: 100%;
+
+}
+
+
+
+
+
+.details {
+    width: auto;
+    height: 1022px;
+    background-color: #CDCDCD;
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+ .details .container {
+    width: 1120px;
+    height: 904px;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    width: 100%;
+    padding: 15px;
+}
+
+.det{
+    margin: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left; 
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.info {
+    width: 100%;
+    padding: 15px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+}
+
+.spec-items{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.value {
+    font-weight: bold;
+    color: #000;
+    text-align: right; 
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin: 5px 0;
+}
+
+.btn-primary {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.details .btn{
+            background-color: transparent;
+            border-color: #000000;
+            color: #000000;
+        }
+
+
+
+
+
+        .Reviews {
+    background-color: white;
+    margin: auto;
+    padding: 30px;
+    max-width: 1000px;
+    font-family: Arial, sans-serif;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.rating-box {
+    text-align: center;
+    background: #fafafa;
+    width: 200px;
+    height: 200px;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.score {
+    font-size: 48px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.rating-box p {
+    margin: 0;
+    font-size: 14px;
+    color: #777;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.schedule {
+    flex-grow: 1;
+    padding-top: 10px;
+}
+
+.review-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.review-bar p:first-child {
+    width: 100px;
+    font-size: 14px;
+    color: #444;
+}
+
+.review-bar p:last-child {
+    width: 30px;
+    text-align: right;
+    font-size: 14px;
+    color: #555;
+}
+
+.bar {
+    flex: 1;
+    height: 10px;
+    background-color: #ddd;
+    margin: 0 10px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bar::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-color: #FFB547;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+}
+
+.excellent::after { width: 100%; }
+.good::after { width: 11%; }
+.medium::after { width: 3%; }
+.below-average::after { width: 8%; }
+.poor::after { width: 1%; }
+
+.com {
+    margin: 30px 0;
+}
+
+.com input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.comments {
+    margin-top: 30px;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 0;
+    /* border-bottom: 1px solid #eee; */
+    gap: 15px;
+}
+
+.comment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5%;
+    object-fit: cover;
+}
+.comment .details{
+    height: 260px;
+}
+
+.details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.r1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.date {
+    font-size: 14px;
+    color: #999;
+}
+
+.details .stars {
+    font-size: 16px;
+    color: #FFD700;
+    margin: 5px 0;
+}
+
+.text {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+
+.comments .btn {
+    background-color: transparent;
+    border: 1px solid #000000;
+    color: #000000;
+    display: block;
+    margin: 25px auto 0;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.comments .btn:hover {
+    background-color: #000000;
+    color: white;
+}
+
+
+    .tag{
+        font-weight: bold;
+        font-size: 24px;
+    }
+    .discount .btn{
+            background-color: #000000;
+            color:#ededed;
+            border: none; 
+        }
+        .discount{
+            margin-bottom: 50px;
+        }
+
+
+        footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    .search-bar {
+        width: 200px; 
+    }
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    .nav-link {
+        padding: 8px 10px;
+    }
+    .nav-icons {
+        gap: 10px;
+    }
+    .under-header {
+        flex-direction: column; 
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+    }
+    .under-header .separator {
+        display: none; 
+    }
+
+
+
+    .product {
+                padding: 20px;
+            }
+            .main-photo img {
+                height: 400px; 
+            }
+            .spec-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .spec-item {
+                width: 100%;
+                min-width: unset;
+            }
+            .b-i {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            .details {
+                height: auto;
+                padding: 20px;
+            }
+            .details .container {
+                height: auto;
+                padding: 10px;
+            }
+            .spec-items {
+                grid-template-columns: 1fr; 
+            }
+            .rating {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .rating-box {
+                width: 100%;
+                height: auto;
+                padding: 15px;
+            }
+            .schedule {
+                width: 100%;
+            }
+            .discount .row {
+                justify-content: center;
+                gap: 20px;
+            }
+            .discount .col-3 {
+                flex: 0 0 auto;
+                width: 50%; /* Two cards per row */
+            }
+
+
+    footer .col-md-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; 
+    }
+    footer .d-flex.align-items-center.mb-3 {
+        justify-content: center; 
+    }
+}
+
+
+
+
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column; 
+        align-items: center;
+        padding: 0 10px;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .search-bar {
+        width: 90%; 
+        margin-bottom: 10px;
+    }
+    .nav {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .nav-item {
+        width: 100%;
+    }
+    .nav-link {
+        padding: 5px 0;
+    }
+    .nav-icons {
+        margin-top: 10px;
+        justify-content: center; 
+        gap: 8px;
+    }
+    .under-header {
+        flex-direction: column; 
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+        font-size: 14px; 
+    }
+    .under-header .separator {
+        display: none;
+    }
+
+
+        .product {
+                padding: 15px;
+            }
+            .main-photo img {
+                height: 300px; 
+            }
+            .price {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            .current-price {
+                font-size: 20px;
+            }
+            .old-price {
+                font-size: 16px;
+            }
+            .colors {
+                flex-wrap: wrap;
+            }
+            .memory {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 5px;
+            }
+            .memory .btn {
+                width: 80px; 
+            }
+            .spec-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .spec-item {
+                width: 100%;
+                min-width: unset;
+            }
+            .b-i {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .details {
+                height: auto;
+                padding: 15px;
+            }
+            .details .container {
+                height: auto;
+                padding: 10px;
+            }
+            .spec-items {
+                grid-template-columns: 1fr;
+            }
+            .rating {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            .rating-box {
+                width: 100%;
+                height: auto;
+                padding: 15px;
+            }
+            .schedule {
+                width: 100%;
+            }
+            .review-bar p:first-child {
+                width: 70px;
+            }
+            .comments .details{
+                height: 680px;
+            }
+            .discount .row {
+                flex-direction: column;
+                align-items: center;
+            }
+            .discount .col-3 {
+                width: 100%;
+            }
+
+    
+
+
+
+    footer .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .col-md-4,
+    footer .col-md-3 {
+        margin-bottom: 20px;
+    }
+    footer .d-flex.gap-3 {
+        justify-content: center; 
+    }
+    footer .col-md-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .d-flex.align-items-center.mb-3 {
+        justify-content: center; 
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            
+            <div class="logo">
+                <img src="https://i.pinimg.com/736x/fe/e3/0a/fee30ae2f127eaea8a5f1d01d80a5b78.jpg" alt="">
+                <h1 class="Name text-black">gadGet</h1>
+            </div>
+            
+            <div class="input-group search-bar">
+                <input type="text" class="form-control" 
+                data-lang-ro-placeholder="Caută..." 
+                data-lang-fr-placeholder="Rechercher..." 
+                placeholder="Caută...">
+                     </div>
+            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Acasă" data-lang-fr="Accueil" onclick="window.location.href='index.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Catalog" data-lang-fr="Catalogue" onclick="window.location.href='Pagină Produse.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Despre" data-lang-fr="À propos" onclick="window.location.href='Despre.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Contactează-ne" data-lang-fr="Contactez-nous" onclick="window.location.href='Contactează-ne.html'"></a></li>
+                  </ul>
+            </nav>
+            
+            <div class="nav-icons">
+                <a href="#"><i class="bi bi-heart" onclick="window.location.href='Wishlist.html'"></i></a>
+                <a href="#"><i class="bi bi-cart" onclick="window.location.href='Coş de Cumpărături.html'"></i></a>
+                <a href="#"><i class="bi bi-person" onclick="window.location.href='Înregistrează-te.html'"></i></a>
+                <div class="language">
+                    <button onclick="setLanguage('ro')" class="fw-bold">RO</button>
+                    <button onclick="setLanguage('fr')" class="fw-bold">FR</button>
+                  </div>
+                  
+            </div>
+        </div>
+    </header>
+
+    <!-- Under Header -->
+    <section class="under-header">
+        <p data-lang-ro="Telefoane" data-lang-fr="Téléphones"><i class="bi bi-phone"></i></p>
+        <div class="separator"></div>
+        <p data-lang-ro="Tablete" data-lang-fr="Tablettes"><i class="bi bi-tablet"></i></p>
+      </section>
+
+
+<!-- product -->
+<section class="product">
+    <div class="row">
+        <div class="col-md-6 d-flex">
+            <div class="main-photo">
+                <img id="selected-photo" src="https://alo.md/media/media/darwin-apple-iphone-14-pro-max-6-gb-256-gb-deep-purple-021-ickk5jz.webp" alt="Imagine principală">
+            </div>
+        </div>
+
+        <!-- Detalii produs -->
+        <div class="col-md-6">
+            <div class="info">
+                <h2>Apple iPhone 14 Pro Max</h2>
+                <div class="price d-flex">
+                    <p class="current-price">$1399</p>
+                    <p class="old-price">$1499</p>
+                </div>
+
+                <!-- Selectare culoare -->
+                <div class="colors d-flex gap-2">
+                    <p data-lang-ro="Alege culoarea:" data-lang-fr="Choisissez la couleur:"></p>
+                    <div class="color-option" style="background-color: #000000;" onclick="changeColor('#000000')"></div>
+                    <div class="color-option" style="background-color: #781DBC;" onclick="changeColor('#5D3FD3')"></div>
+                    <div class="color-option" style="background-color: #E10000;" onclick="changeColor('#000000')"></div>
+                    <div class="color-option" style="background-color: #E1B000;" onclick="changeColor('#D4AF37')"></div>
+                    <div class="color-option" style="background-color: #E8E8E8;" onclick="changeColor('#FFFFFF')"></div>
+                </div>
+
+                <!-- Selectare memorie -->
+                <div class="memory d-flex gap-2">
+                    <a href="#" class="btn">128GB</a>
+                    <a href="#" class="btn">256GB</a>
+                    <a href="#" class="btn">512GB</a>
+                    <a href="#" class="btn btn-selected">1TB</a>
+                </div>
+                                                            
+                <!-- optional -->
+                <div class="optional">
+                    <div class="spec-row">
+                        <div class="spec-item">
+                            <img src="https://cdn-icons-png.flaticon.com/128/8797/8797929.png" alt="">
+                            <p class="name" data-lang-ro="Dimensiunea ecranului" data-lang-fr="Taille de l'écran"></p>
+                            <p>6.7"</p>
+                        </div>
+                        <div class="spec-item">
+                            <img src="https://cdn-icons-png.flaticon.com/128/482/482484.png" alt="">
+                            <p class="name">CPU</p>
+                            <p>Apple A16 Bionic</p>
+                        </div>
+                        <div class="spec-item">
+                            <img src="https://cdn-icons-png.flaticon.com/128/11872/11872910.png" alt="">
+                            <p class="name" data-lang-ro="Numărul de nuclee" data-lang-fr="Nombre de cœurs"></p>
+                            <p>6</p>
+                        </div>
+                    </div>
+                    <div class="spec-row">
+                        <div class="spec-item">
+                            <img src="https://cdn-icons-png.flaticon.com/128/83/83574.png" alt="">
+                            <p class="name" data-lang-ro="Cameră principală" data-lang-fr="Caméra principale"></p>
+                            <p>48-12-12 MP</p>
+                        </div>
+                        <div class="spec-item">
+                            <img src="https://cdn-icons-png.flaticon.com/128/14026/14026376.png" alt="">
+                            <p class="name" data-lang-ro="Cameră frontală" data-lang-fr="Caméra frontale"></p>
+                            <p>2 MP</p>
+                        </div>
+                        <div class="spec-item">
+                            <img src="https://cdn-icons-png.flaticon.com/128/31/31956.png" alt="">
+                            <p class="name" data-lang-ro="Capacitatea bateriei" data-lang-fr="Capacité de la batterie"></p>
+                            <p>4323 mAh</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Descriere produs -->
+                <div class="description">
+                    <p data-lang-ro="Capacităţi îmbunătăţite datorită unui afişaj mărit de 6.7” şi funcţionează fără reîncărcare pe tot parcursul
+                    zilei. Fotografii incredibile ca în lumină slabă, dar şi în lumină puternică, folosind noul sistem cu încă
+                    două camere mai multe..." data-lang-fr="Des capacités améliorées grâce à un écran plus grand de 6,7 pouces et une
+                    autonomie de 12 heures. Des photos incroyables, en basse lumière comme en pleine lumière, grâce au nouveau système
+                    doté de deux caméras supplémentaires…"></div>
+
+                <!-- Butoane -->
+                <div class="buttons">
+                    <button class="btn btn-outline-dark" data-lang-ro="Adaugă la lista de dorinţe" data-lang-fr="Ajouter à la liste de souhaits" ></button>
+                    <button class="btn btn-dark" data-lang-ro="Adaugă în coș" data-lang-fr="Ajouter au panier" onclick="addToCart()"></button>
+            
+                </div>
+                <div class="b-i">
+                    <div class="benefit">
+                        <img src="https://cdn-icons-png.flaticon.com/128/411/411763.png" alt="">
+                        <p class="name" data-lang-ro="Livrare Gratuită" data-lang-fr="Livraison Gratuite"></p>
+                        <p data-lang-ro="1-2 zile" data-lang-fr="1-2 jours"></p>
+                    </div>
+                    <div class="benefit">
+                        <img src="https://cdn-icons-png.flaticon.com/128/7444/7444276.png" alt="">
+                        <p class="name" data-lang-ro="În Stoc" data-lang-fr="En Stock"></p>
+                        <p data-lang-ro="Astăzi" data-lang-fr="Aujourd'hui"></p>
+                    </div>
+                    <div class="benefit">
+                        <img src="https://cdn-icons-png.flaticon.com/128/9417/9417383.png" alt="">
+                        <p class="name" data-lang-ro="Garanţie" data-lang-fr="Garantie"></p>
+                        <p data-lang-ro="1 an" data-lang-fr="1 an"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+  
+
+
+
+
+
+
+
+ <!-- details -->
+ <section class="details">
+    <div class="container">
+        <div class="det">
+        <h4 class="title" data-lang-ro="Detalii" data-lang-fr="Détails"></h4>
+        <p class="description" data-lang-ro="Așa cum o carte este judecată după coperta ei, primul lucru pe care îl observi când iei un smartphone modern este afișajul. 
+        Nimic surprinzător, deoarece tehnologiile avansate vă permit să nivelați practic cadrele de afișare și decupaje pentru camera frontală și difuzor..."
+        data-lang-fr="Tout comme on juge un livre à sa couverture, la première chose que l'on remarque en prenant en main un smartphone moderne, c'est son écran. Rien
+        d'étonnant, car les technologies avancées permettent d'aligner pratiquement les bords de l'écran et les découpes pour la caméra frontale et le haut-parleur."></p>
+    </div>
+        <div class="info">
+            <h5 class="section-title" data-lang-ro="Ecran" data-lang-fr="Écran"></h5>
+            <div class="spec-items">
+                <p data-lang-ro="Diagonala ecranului" data-lang-fr="Diagonale de l'écran"></p>
+                <p class="value">6.7"</p>
+            </div>
+            <hr>
+            <div class="spec-items">
+                <p data-lang-ro="Rezoluția ecranului" data-lang-fr="Résolution de l'écran"></p>
+                <p class="value">2796x1290</p>
+            </div>
+            <hr>
+            <div class="spec-items">
+                <p data-lang-ro="Rata de reîmprospătare" data-lang-fr="Taux de rafraîchissement"></p>
+                <p class="value">120 Hz</p>
+            </div>
+            <hr>
+            <div class="spec-items">
+                <p data-lang-ro="Densitatea pixelilor" data-lang-fr="Densité de pixels"></p>
+                <p class="value">460 ppi</p>
+            </div>
+            <hr>
+            <div class="spec-items">
+                <p data-lang-ro="Tipul ecranului" data-lang-fr="Type d'écran"></p>
+                <p class="value">OLED</p>
+            </div>
+            <hr>
+
+            <h5 class="section-title">CPU</h5>
+            <div class="spec-items">
+                <p>CPU</p>
+                <p class="value">A16 Bionic</p>
+            </div>
+            <hr>
+            <div class="spec-items">
+                <p data-lang-ro="Numărul de nuclee" data-lang-fr="Nombre de cœurs"></p>
+                <p class="value">6</p>
+            </div>
+        </div>
+
+        <a href="#" class="btn btn-primary" data-lang-ro="Vezi Mai Multe" data-lang-fr="Voir Plus"></a>
+    </div>
+</section>
+
+
+
+
+
+<!-- Recenzii -->
+<section class="Reviews">
+    <div class="container">
+        <h4 class="title" data-lang-ro="Recenzii" data-lang-fr="Avis"></h4>
+        <div class="rating d-flex">
+            <div class="rating-box">
+                <h2 class="score">4.8</h2>
+                <p data-lang-ro="din 125 de recenzii" data-lang-fr="à partir de 125 avis"></p>
+                <div class="stars">★★★★★</div> 
+            </div>
+            <div class="schedule">
+                <div class="review-bar d-flex">
+                    <p data-lang-ro="Excelent" data-lang-fr="Excellent"></p>
+                    <div class="bar excellent"></div>
+                    <p>100</p>
+                </div>
+                <div class="review-bar d-flex">
+                    <p data-lang-ro="Bun" data-lang-fr="Bien"></p>
+                    <div class="bar good"></div>
+                    <p>11</p>
+                </div>
+                <div class="review-bar d-flex">
+                    <p data-lang-ro="Mediu" data-lang-fr="Moyenne"></p>
+                    <div class="bar medium"></div>
+                    <p>3</p>
+                </div>
+                <div class="review-bar d-flex">
+                    <p data-lang-ro="Sub Medie" data-lang-fr="En Dessous De La Moyenne"></p>
+                    <div class="bar below-average"></div>
+                    <p>8</p>
+                </div>
+                <div class="review-bar d-flex">
+                    <p data-lang-ro="Slab" data-lang-fr="Faible"></p>
+                    <div class="bar poor"></div>
+                    <p>1</p>
+                </div>
+            </div>
+        </div>
+        <div class="com">
+        <input type="text" class="form-control" data-lang-ro-placeholder="Lasă un comentariu" data-lang-fr-placeholder="Laissez un commentaire" placeholder="Lasă un comentariu">
+    </div>
+</div>
+
+    <div class="comments">
+        <div class="comment">
+            <img src="https://cdn-icons-png.flaticon.com/128/6997/6997662.png" alt="Profil">
+            <div class="details">
+                <div class="r1 d-flex">
+                <p class="name">Grace Carey</p>
+                <p class="date" data-lang-ro="24 Ianuarie, 2023" data-lang-fr="24 Janvier, 2023"></p>
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="text" data-lang-ro="Eram puţin nervoasă să cumpăr un telefon secondhand de la Amazon, dar nu aş putea fi mult mai mulţumit
+                de achiziţia mea!! Am un plan de date preplătit, aşa că eram îngrijorată că acest telefon nu se va conecta la planul
+                meu de date, deoarece noile telefoane nu mai au o tava fizică Sim, dar nu ar fi putut fi mai uşor! Am cumpărat un
+                iPhone 14 Pro Max negru deblocat în stare excelentă şi totul merge PERFECT. 
+                A fost foarte uşor, iar telefonul funcţionează şi arată grozav. Era într-adevăr în stare excelentă. Recomand cu drag!!!"
+                data-lang-fr="J'étais un peu inquiet à l'idée d'acheter un téléphone d'occasion sur Amazon, mais je suis ravi de mon achat !
+                J'ai un forfait data prépayé, donc j'avais peur que ce téléphone ne se connecte pas à mon forfait data, car les nouveaux
+                téléphones n'ont plus de plateau SIM physique. Mais c'était on ne peut plus simple ! J'ai acheté un iPhone 14 Pro Max noir
+                débloqué en excellent état et tout fonctionne PARFAITEMENT.
+C'était très facile, le téléphone fonctionne et est superbe. Il était vraiment en excellent état. Je le recommande vivement !"></p>
+            </div>
+        </div>
+
+        <div class="comment">
+            <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="Profil">
+            <div class="details">
+                <div class="r1 d-flex">
+                <p class="name">Ronald Richards</p>
+                <p class="date" data-lang-ro="24 Ianuarie, 2023" data-lang-fr="24 Janvier, 2023"></p>
+                </div>
+                <div class="stars">★★★★☆</div>
+                <p class="text" data-lang-ro="Acest telefon are spaţiu de stocare 1T şi este durabil. Plus că toate noile iPhon-uri au un port C!
+                Apple le elimină treptat pe cele actuale!(Totul despre Benjamin) Aşadar, dacă doriţi un telefon care să ia un
+                iPhone 14 pro max şi să obţineţi mai multe cabluri şi mufe." data-lang-fr="Ce téléphone a une capacité de stockage de
+                1 To et est robuste. De plus, tous les nouveaux iPhone sont équipés d'un port Type-C !
+                Apple supprime progressivement les modèles actuels ! (Tout sur Benjamin) Alors, si vous cherchez un téléphone
+                compatible avec un iPhone 14 Pro Max et doté de plus de câbles et de prises,"></p>
+            </div>
+        </div>
+
+        <div class="comment">
+            <img src="https://cdn-icons-png.flaticon.com/128/3135/3135789.png" alt="Profil">
+            <div class="details">
+                <div class="r1 d-flex">
+                <p class="name">Darcy King</p>
+                <p class="date" data-lang-ro="24 Ianuarie, 2023" data-lang-fr="24 Janvier, 2023"></p>
+                </div>
+                <div class="stars">★★★★★</div>
+                <p class="text" data-lang-ro="S-ar putea să fiu singura care spune asta, dar camera este puţin funky. Sperând că se va schimba cu o
+                actualizare de software: în caz contrar, ador acest telefon! A venit în stare excelentă."
+                data-lang-fr="Je suis peut-être le seul à le dire, mais l'appareil photo est un peu bizarre. J'espère que ça changera
+                avec une mise à jour logicielle : sinon, j'adore ce téléphone ! Il est arrivé en excellent état."></p>
+                <div class="d-flex gap-3">
+                <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3823e1df-3fd1-4406-9c2e-69e1e21213db_3446x2585.jpeg" alt="">
+                <img src="https://cdn.mos.cms.futurecdn.net/N8HvTtX5JAwd6C5Y2WLZZC-1200-80.jpg" alt="">
+            </div>
+        </div>
+        </div>
+
+        <div class="comment">
+            <img src="https://cdn-icons-png.flaticon.com/128/428/428933.png" alt="Profil">
+            <div class="details">
+                <div class="r1 d-flex">
+                <p class="name">John Malcolm</p>
+                <p class="date" data-lang-ro="24 Ianuarie, 2023" data-lang-fr="24 Janvier, 2023"></p>
+            </div>
+                <div class="stars">★★★★☆</div>
+                <p class="text" data-lang-ro="Am iPhone 14 Pro Max de câteva luni şi sunt foarte mulţumit. Ecranul e superb, super luminos şi fluid,
+                    mai ales cu Dynamic Island, care e chiar utilă, nu doar un “gimmick”. Camera face poze excelente, chiar şi pe timp
+                    de noapte, iar modul Cinematic e genial pentru filmări. Bateria mă ţine lejer o zi întreagă, iar totul se mişcă
+                    extrem de rapid." 
+                    data-lang-fr="J'ai l'iPhone 14 Pro Max depuis quelques mois maintenant et j'en suis très satisfait. L'écran est magnifique, ultra-lumineux et fluide,
+                    surtout avec Dynamic Island, qui est vraiment pratique, pas un simple gadget. L'appareil photo prend d'excellentes photos, même de nuit,
+                    et le mode Cinématique est parfait pour filmer. La batterie tient facilement une journée entière, et tout va extrêmement vite."></p>
+            </div>
+        </div>
+
+        <a href="#" class="btn btn-primary" data-lang-ro="Vezi Mai Multe" data-lang-fr="Voir Plus"></a>
+    </div>
+</section>
+
+
+
+
+
+<!-- Discount -->
+<section class="discount">
+    <div class="container">
+       <div class="tags">
+           <p class="tag" data-lang-ro="Produse Similare" data-lang-fr="Produits Similaires"></p>
+           </div>
+       <div class="row text-center">
+           <div class="col-3">
+               <div class="card" style="width: 18rem;">
+                   <img src="https://i.simpalsmedia.com/marketplace/products/original/5d7fb67dba32df8d2e41899efc1a25fb.jpg" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <p class="card-text" data-lang-ro="Apple iPhone 14 Pro 512GB Auriu (MQ233)" data-lang-fr="Apple iPhone 14 Pro 512GB Doré (MQ233)"></p>
+                     <h5 class="card-title">$1599</h5>
+                     <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                   </div>
+                 </div>
+           </div>
+
+           <div class="col-3">
+               <div class="card" style="width: 18rem;">
+                   <img src="https://aiwa-int.com.au/cdn/shop/files/888796_AW-PPEACH_frontandback_1000x1000_ae33dd43-325b-4447-8470-342ae5bf74d0.png?v=1737459525&width=1445" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <p class="card-text" data-lang-ro="AIWA 10.1’’ Wifi Tabletă Pro Pro (MQ233)" data-lang-fr="AIWA 10.1’’ Wifi Tablette Pro (MQ233)"></p>
+                     <h5 class="card-title">$1437</h5>
+                     <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                   </div>
+                 </div>
+           </div>
+
+           <div class="col-3">
+               <div class="card" style="width: 18rem;">
+                   <img src="https://i.simpalsmedia.com/marketplace/products/original/1d51ed2ff634bb64e50bb628ccd97169.jpg" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <p class="card-text" data-lang-ro="Tabletă Apple iPad 2021 10.2” Wi-Fi Gri" data-lang-fr="Tablette Apple iPad 2021 10,2 pouces Wi-Fi Gris"></p>
+                     <h5 class="card-title">$1339</h5>
+                     <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                   </div>
+                 </div>
+           </div>
+
+           <div class="col-3">
+               <div class="card" style="width: 18rem;">
+                   <img src="https://i.simpalsmedia.com/marketplace/products/original/4c6f3f8966604a932aa5e84a32f0f32f.jpg" class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <p class="card-text" data-lang-ro="Apple iPhone 14 Pro 1TB Gri (MQ2V3)" data-lang-fr="Apple iPhone 14 Pro 1TB Gris (MQ2V3)"></p>
+                     <h5 class="card-title">$1499</h5>
+                     <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                   </div>
+                 </div>
+           </div>
+
+       </div>
+   </div>
+   </section>
+
+
+
+
+
+<!-- footer -->
+   <footer class="bg-black text-white py-5">
+    <div class="container">
+        <div class="row justify-content-between align-items-start">
+            <div class="col-md-4 mb-4">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="https://i.pinimg.com/736x/86/a9/94/86a9946861d76198d479423669a341a5.jpg" alt="Logo" width="30" class="me-2">
+                    <h4 class="m-0 fw-bold" data-lang-ro="gadGet" data-lang-fr="gadGet"></h4>
+                </div>
+                <p data-lang-ro="Suntem un magazin online specializat în telefoane și tablete. Oferim produse originale, livrare rapidă și suport de încredere pentru fiecare client." 
+                   data-lang-fr="Nous sommes une boutique en ligne spécialisée dans les téléphones et tablettes. Nous offrons des produits originaux, une livraison rapide et un support fiable pour chaque client.">
+                </p>
+                <div class="contact">
+                    <h4 data-lang-ro="Contacte" data-lang-fr="Contacts"></h4>
+                    <p data-lang-ro="Telefon: +373 (68) 296602" data-lang-fr="Téléphone: +373 (68) 296602"></p>
+                    <p>Email: contact@7cyber.com</p>
+                </div>
+                <div class="d-flex gap-3 mt-3">
+                    <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-tiktok fs-5"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-bold" data-lang-ro="Servicii" data-lang-fr="Services"></h5>
+                <ul class="list-unstyled mt-3">
+                    <li data-lang-ro="Oferte speciale și reduceri" data-lang-fr="Offres spéciales et réductions"></li>
+                    <li data-lang-ro="Carduri cadou electronice" data-lang-fr="Cartes cadeaux électroniques"></li>
+                    <li data-lang-ro="Finanțare în rate fără dobândă" data-lang-fr="Financement en plusieurs fois sans intérêt"></li>
+                    <li data-lang-ro="Garanție extinsă și service autorizat" data-lang-fr="Garantie étendue et service agréé"></li>
+                    <li data-lang-ro="Facturare online și cont client" data-lang-fr="Facturation en ligne et compte client"></li>
+                    <li data-lang-ro="Metode multiple de plată" data-lang-fr="Modes de paiement multiples"></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold" data-lang-ro="Asistență pentru clienți" data-lang-fr="Assistance client"></h5>
+                <ul class="list-unstyled mt-3">
+                    <li data-lang-ro="Urmărirea comenzii" data-lang-fr="Suivi de commande"></li>
+                    <li data-lang-ro="Informații despre livrare" data-lang-fr="Informations sur la livraison"></li>
+                    <li data-lang-ro="Politica de retur și schimb" data-lang-fr="Politique de retour et d’échange"></li>
+                    <li data-lang-ro="Garanția produselor" data-lang-fr="Garantie des produits"></li>
+                    <li data-lang-ro="Întrebări frecvente (FAQ)" data-lang-fr="FAQ (Foire Aux Questions)"></li>
+                    <li data-lang-ro="Termeni și condiții de utilizare a site-ului" data-lang-fr="Conditions générales d’utilisation du site"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // 1.ro/fr
+function setLanguage(lang) {
+const elements = document.querySelectorAll('[data-lang-ro]');
+elements.forEach(el => {
+  el.textContent = el.getAttribute(`data-lang-${lang}`);
+});
+
+const inputElements = document.querySelectorAll('[data-lang-ro-placeholder]');
+inputElements.forEach(input => {
+  input.placeholder = input.getAttribute(`data-lang-${lang}-placeholder`);
+});
+
+localStorage.setItem('lang', lang); // Salvăm limba aleasă
+}
+
+// Setăm limba salvată (default: ro)
+document.addEventListener("DOMContentLoaded", () => {
+const savedLang = localStorage.getItem('lang') || 'ro';
+setLanguage(savedLang);
+});
+
+
+// 2.
+function changeColor(color) {
+    document.querySelectorAll(".color-option").forEach(c => c.style.border = "2px solid transparent");
+    event.target.style.border = "2px solid #000";
+}
+ 
+
+
+    // 3.
+    document.addEventListener("DOMContentLoaded", function () {
+    const productID = localStorage.getItem("selectedProductID");
+    if (!productID) return; 
+
+    const selectedProduct = product.find(p => p.id == productID);
+    if (!selectedProduct) return;
+
+    document.querySelector(".info h2").textContent = selectedProduct.nume;
+    document.querySelector(".current-price").textContent = `$${selectedProduct.pret}`;
+    document.getElementById("selected-photo").src = selectedProduct.imagine;
+});
+
+
+
+
+    const product = [
+    {
+        "id": 1,
+        "nume": "Apple iPhone 14 Pro Max",
+        "brand": "Apple",
+        "pret": 1399,
+        "pret-vechi": 1899,
+        "scor": 4.9,
+        "sistem": "iOS",
+        "stoc": true,
+        "imagine": "https://alo.md/media/media/darwin-apple-iphone-14-pro-max-6-gb-256-gb-deep-purple-021-ickk5jz.webp"
+    },
+    {
+        "id": 2,
+        "nume": "Samsung Galaxy S23 Ultra",
+        "brand": "Samsung",
+        "pret": 1299,
+        "pret-vechi": 1899,
+        "scor": 4.8,
+        "sistem": "Android",
+        "stoc": true,
+        "imagine": "https://cdn.revendo.com/media/0d/4d/2f/1677024448/samsung-galaxy-s23-ultra-graphite-guenstig-gebraucht-kaufen.png.png"
+    },
+    {
+        "id": 3,
+        "nume": "Xiaomi Mi 11",
+        "brand": "Xiaomi",
+        "pret": 699,
+        "pret-vechi": 1899,
+        "scor": 4.7,
+        "sistem": "Android",
+        "stoc": false,
+        "imagine": "https://i.mi.ua/media/catalog/product/cache/1/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/import/1678139797.webp"
+    },
+    {
+        "id": 4,
+        "nume": "Poco F5 Pro",
+        "brand": "Poco",
+        "pret": 599,
+        "pret-vechi": 1899,
+        "scor": 4.6,
+        "sistem": "Android",
+        "stoc": true,
+        "imagine": "https://goodshop.md/images/detailed/212/e9235f37-cfda-47ab-95e5-1f4201ece342.webp"
+    },
+    {
+        "id": 5,
+        "nume": "OPPO Reno 10 Pro",
+        "brand": "OPPO",
+        "pret": 799,
+        "pret-vechi": 1899,
+        "scor": 4.7,
+        "sistem": "Android",
+        "stoc": true,
+        "imagine": "https://cellplanetphones.com/wp-content/uploads/2023/11/OPPO-RENO-10-PRO-5G-12256GB-PURPLE.png"
+    },
+    {
+        "id": 6,
+        "nume": "Honor Magic 5 Pro",
+        "brand": "Honor",
+        "pret": 899,
+        "pret-vechi": 1899,
+        "scor": 4.6,
+        "sistem": "Android",
+        "stoc": true,
+        "imagine": "https://gorilla.md/wp-content/uploads/2024/04/i-70.webp"
+    },
+    {
+        "id": 7,
+        "nume": "Motorola Edge 40",
+        "brand": "Motorola",
+        "pret": 499,
+        "pret-vechi": 1899,
+        "scor": 4.5,
+        "sistem": "Android",
+        "stoc": false,
+        "imagine": "https://www.cactus.md/i.ashx?i=/i/products/27/139727.jpg&w=790"
+    },
+    {
+        "id": 8,
+        "nume": "Nokia G60 5G",
+        "brand": "Nokia",
+        "pret": 399,
+        "pret-vechi": 1899,
+        "scor": 4.4,
+        "sistem": "Android",
+        "stoc": true,
+        "imagine": "https://cdn.pandashop.md/i/?i=/i/products/137/1374648.jpg&w=1220&h=1220"
+    },
+    {
+        "id": 9,
+        "nume": "Realme GT Neo 3",
+        "brand": "Realme",
+        "pret": 749,
+        "pret-vechi": 1899,
+        "scor": 4.7,
+        "sistem": "Android",
+        "stoc": true,
+        "imagine": "https://atehno.md/files/items/realme-gt-neo-3-5g-150w-9359844910688.jpg"
+    },
+    {
+        "id": 10,
+        "nume": "Apple iPhone 13 Mini",
+        "brand": "Apple",
+        "pret": 799,
+        "pret-vechi": 1899,
+        "scor": 4.8,
+        "sistem": "iOS",
+        "stoc": true,
+        "imagine": "https://apple-market.ru/image/cache/catalog/Add/13%20mini/iphone13_red.png_500.webp"
+    },
+    {
+        "id": 11,
+        "nume": "Samsung Galaxy A54 5G",
+        "brand": "Samsung",
+        "pret": 599,
+        "pret-vechi": 1899,
+        "scor": 4.6,
+        "sistem": "Android",
+        "stoc": true,
+        "imagine": "https://h-t.md/images/detailed/98/319611091_38fj-47.jpg"
+    },
+    {
+        "id": 12,
+        "nume": "Xiaomi Redmi Note 12 Pro",
+        "brand": "Xiaomi",
+        "pret": 499,
+        "pret-vechi": 1899,
+        "scor": 4.5,
+        "sistem": "Android",
+        "stoc": true,
+        "imagine": "https://www.cactus.md/i.ashx?i=/i/products/26/130314.jpg&w=790"
+    },
+    {
+        "id": 13,
+        "nume": "Poco X5 Pro",
+        "brand": "Poco",
+        "pret": 449,
+        "pret-vechi": 1899,
+        "scor": 4.6,
+        "sistem": "Android",
+        "stoc": false,
+        "imagine": "https://www.cactus.md/i.ashx?i=/i/products/26/131499.jpg&w=790"
+    },
+    {
+        "id": 14,
+        "nume": "OPPO Find X5",
+        "brand": "OPPO",
+        "pret": 899,
+        "pret-vechi": 1899,
+        "scor": 4.7,
+        "sistem": "Android",
+        "stoc": true,
+        "imagine": "https://www.giztop.com/media/catalog/product/cache/97cc1143d2e20f2b0c8ea91aaa12053c/o/p/oppo_find_x5_pro_1.jpg"
+    },
+    {
+        "id": 15,
+        "nume": "Honor 90 5G",
+        "brand": "Honor",
+        "pret": 599,
+        "pret-vechi": 1899,
+        "scor": 4.6,
+        "sistem": "Android",
+        "stoc": true,
+        "imagine": "https://gorilla.md/wp-content/uploads/2024/08/i-2-3.webp"
+    },
+    {
+        "id": 16,
+        "nume": "Motorola Razr 40 Ultra",
+        "brand": "Motorola",
+        "pret": 1099,
+        "pret-vechi": 1899,
+        "scor": 4.8,
+        "sistem": "Android",
+        "stoc": false,
+        "imagine": "https://www.cactus.md/i.ashx?i=/i/products/27/135053.jpg&w=790"
+    },
+    {
+        "id": 17,
+        "nume": "Nokia XR21",
+        "brand": "Nokia",
+        "pret": 499,
+        "pret-vechi": 1899,
+        "scor": 4.5,
+        "sistem": "Android",
+        "stoc": true,
+        "imagine": "https://cdn.pandashop.md/i/?i=/i/products/157/1575225.jpg&w=1220&h=1220"
+    },
+    {
+        "id": 18,
+        "nume": "Realme C55",
+        "brand": "Realme",
+        "pret": 349,
+        "pret-vechi": 1899,
+        "scor": 4.4,
+        "sistem": "Android",
+        "stoc": true,
+        "imagine": "https://www.pandashop.md/i/products/155/1554646.jpg"
+    },
+    {
+        "id": 19,
+        "nume": "Apple iPhone SE (2022)",
+        "brand": "Apple",
+        "pret": 399,
+        "pret-vechi": 1899,
+        "scor": 4.6,
+        "sistem": "iOS",
+        "stoc": false,
+        "imagine": "https://xstore.md/images/product/2022/04/Apple-iPhone-se-2022-Red-1.jpg"
+    },
+    {
+        "id": 20,
+        "nume": "Samsung Galaxy Z Flip5",
+        "brand": "Samsung",
+        "pret": 1299,
+        "pret-vechi": 1899,
+        "scor": 4.7,
+        "sistem": "Android",
+        "stoc": true,
+        "imagine": "https://cdn1.technopark.ru/technopark/photos_resized/product/1000_1000/670573/1_670573.jpg"
+    },
+        {
+            "id": 21,
+            "nume": "Samsung Galaxy S22",
+            "brand": "Samsung",
+            "pret": 799,
+            "pret-vechi": 1899,
+            "scor": 4.7,
+            "sistem": "Android",
+            "stoc": true,
+            "imagine": "https://cdn-ultra.esempla.com/storage/webp/0081c11e-2f0c-4ca9-b5c4-ee605369c3ee.webp"
+        },
+        {
+            "id": 22,
+            "nume": "Xiaomi Mi 10T Pro",
+            "brand": "Xiaomi",
+            "pret": 649,
+            "pret-vechi": 1899,
+            "scor": 4.6,
+            "sistem": "Android",
+            "stoc": false,
+            "imagine": "https://api.technodom.kz/f3/api/v1/images/800/800/243696_1.jpg"
+        },
+        {
+            "id": 23,
+            "nume": "Poco M4 Pro",
+            "brand": "Poco",
+            "pret": 399,
+            "pret-vechi": 1899,
+            "scor": 4.5,
+            "sistem": "Android",
+            "stoc": true,
+            "imagine": "https://cdn-ultra.esempla.com/storage/webp/b668e2b0-0605-457e-b78b-44dc409de989.webp"
+        },
+        {
+            "id": 24,
+            "nume": "OPPO Reno 8",
+            "brand": "OPPO",
+            "pret": 899,
+            "pret-vechi": 1899,
+            "scor": 4.7,
+            "sistem": "Android",
+            "stoc": false,
+            "imagine": "https://3logic.ru/pimg/pim/regular/1467679.jpg"
+        },
+        {
+            "id": 25,
+            "nume": "Honor X8",
+            "brand": "Honor",
+            "pret": 549,
+            "pret-vechi": 1899,
+            "scor": 4.6,
+            "sistem": "Android",
+            "stoc": true,
+            "imagine": "https://kontakt.az/media/catalog/product/cache/a252e3db3d11365dd1457895056a5f34/t/m/tm-dg-sbp-1105-sm-2726_1.png"
+        },
+        {
+            "id": 26,
+            "nume": "Motorola Moto G82",
+            "brand": "Motorola",
+            "pret": 469,
+            "pret-vechi": 1899,
+            "scor": 4.5,
+            "sistem": "Android",
+            "stoc": true,
+            "imagine": "https://s.pn.com.ua/i/md/1232/5383542/5383542_00p.jpg"
+        },
+        {
+            "id": 27,
+            "nume": "Nokia C21 Plus",
+            "brand": "Nokia",
+            "pret": 299,
+            "pret-vechi": 1899,
+            "scor": 4.3,
+            "sistem": "Android",
+            "stoc": false,
+            "imagine": "https://m.media-amazon.com/images/I/61uoyUvKyEL.jpg"
+        },
+        {
+            "id": 28,
+            "nume": "Realme 10",
+            "brand": "Realme",
+            "pret": 399,
+            "pret-vechi": 1899,
+            "scor": 4.4,
+            "sistem": "Android",
+            "stoc": true,
+            "imagine": "https://www.smart.md/image/cache/data/results-photos/smartgsm/Realme-10-Dual-Sim-8128GB-White-352x352.jpg"
+        },
+        {
+            "id": 29,
+            "nume": "Apple iPhone XR",
+            "brand": "Apple",
+            "pret": 499,
+            "pret-vechi": 1899,
+            "scor": 4.6,
+            "sistem": "iOS",
+            "stoc": false,
+            "imagine": "https://gorilla.md/wp-content/uploads/2023/11/i-7-7.webp"
+        },
+        {
+            "id": 30,
+            "nume": "Samsung Galaxy A73",
+            "brand": "Samsung",
+            "pret": 699,
+            "pret-vechi": 1899,
+            "scor": 4.7,
+            "sistem": "Android",
+            "stoc": true,
+            "imagine": "https://geek.md/image/catalog/products/18049-G/Samsung%20Galaxy%20A73%205G,%20Gray,%202400x1080,%208GB256GB%20(20).webp"
+        },
+            {
+                "id": 31,
+                "nume": "Samsung Galaxy S21",
+                "brand": "Samsung",
+                "pret": 749,
+                "pret-vechi": 1899,
+                "scor": 4.7,
+                "sistem": "Android",
+                "stoc": true,
+                "imagine": "https://i.simpalsmedia.com/thumbor/500x0/i.simpalsmedia.com/marketplace/products/original/75eea75b16309fe2abeff83627d6c39b.jpg"
+            },
+            {
+                "id": 32,
+                "nume": "Xiaomi Mi 12 Lite",
+                "brand": "Xiaomi",
+                "pret": 599,
+                "pret-vechi": 1899,
+                "scor": 4.6,
+                "sistem": "Android",
+                "stoc": false,
+                "imagine": "https://xstore.md/images/product/2022/11/Xiaomi-12-Lite-,-Black.png"
+            },
+            {
+                "id": 33,
+                "nume": "Poco F4 GT",
+                "brand": "Poco",
+                "pret": 799,
+                "pret-vechi": 1899,
+                "scor": 4.7,
+                "sistem": "Android",
+                "stoc": true,
+                "imagine": "https://atehno.md/files/items/xiaomi-poco-f4-gt-5g-12gb256gb-9359844698692.jpg"
+            },
+            {
+                "id": 34,
+                "nume": "OPPO A78",
+                "brand": "OPPO",
+                "pret": 349,
+                "pret-vechi": 1899,
+                "scor": 4.5,
+                "sistem": "Android",
+                "stoc": true,
+                "imagine": "https://www.oppo.com/content/dam/oppo/common/mkt/v2-2/a78-en/listpage/a78-427_600-green.png"
+            },
+            {
+                "id": 35,
+                "nume": "Honor 70 5G",
+                "brand": "Honor",
+                "pret": 549,
+                "pret-vechi": 1899,
+                "scor": 4.6,
+                "sistem": "Android",
+                "stoc": true,
+                "imagine": "https://atehno.md/files/items/honor-70-5g-dual-sim-8gb-9359844909644.jpg"
+            },
+            {
+                "id": 36,
+                "nume": "Motorola Edge 30 Ultra",
+                "brand": "Motorola",
+                "pret": 899,
+                "pret-vechi": 1899,
+                "scor": 4.8,
+                "sistem": "Android",
+                "stoc": false,
+                "imagine": "https://gorilla.md/wp-content/uploads/2023/07/i-226.webp"
+            },
+            {
+                "id": 37,
+                "nume": "Nokia G50",
+                "brand": "Nokia",
+                "pret": 499,
+                "pret-vechi": 1899,
+                "scor": 4.5,
+                "sistem": "Android",
+                "stoc": true,
+                "imagine": "https://cdn.pandashop.md/i/?i=/i/products/123/1230107.jpg&w=1220&h=1220"
+            },
+            {
+                "id": 38,
+                "nume": "Realme 9 Pro+",
+                "brand": "Realme",
+                "pret": 649,
+                "pret-vechi": 1899,
+                "scor": 4.6,
+                "sistem": "Android",
+                "stoc": true,
+                "imagine": "https://www.cactus.md/i.ashx?i=/i/products/24/121923.jpg&w=790"
+            },
+            {
+                "id": 39,
+                "nume": "Apple iPhone 12 Pro",
+                "brand": "Apple",
+                "pret": 899,
+                "pret-vechi": 1899,
+                "scor": 4.8,
+                "sistem": "iOS",
+                "stoc": false,
+                "imagine": "https://gorilla.md/wp-content/uploads/2023/03/9-400x500-1-4.png"
+            },
+            {
+                "id": 40,
+                "nume": "Samsung Galaxy Z Fold5",
+                "brand": "Samsung",
+                "pret": 1799,
+                "pret-vechi": 1899,
+                "scor": 4.8,
+                "sistem": "Android",
+                "stoc": true,
+                "imagine": "https://i5.walmartimages.com/seo/Samsung-Galaxy-Z-Fold5-5G-SM-F946U-512-GB-ice-Blue-US-Model-Factory-Unlocked-Cell-Phone-Excellent-Condition_ddf12b9c-6deb-415b-a446-add8e54e3712.add07d22146791629d70a2dd675183a7.jpeg"
+            },
+                {
+                    "id": 41,
+                    "nume": "Samsung Galaxy M53 5G",
+                    "brand": "Samsung",
+                    "pret": 599,
+                    "pret-vechi": 1899,
+                    "scor": 4.6,
+                    "sistem": "Android",
+                    "stoc": true,
+                    "imagine": "https://m.media-amazon.com/images/I/81Bf1rWLA+L._AC_UF1000,1000_QL80_.jpg"
+                },
+                {
+                    "id": 42,
+                    "nume": "Xiaomi Redmi 11T",
+                    "brand": "Xiaomi",
+                    "pret": 449,
+                    "pret-vechi": 1899,
+                    "scor": 4.5,
+                    "sistem": "Android",
+                    "stoc": false,
+                    "imagine": "https://enter.online/images/product/2023/08/enter-xiaomi-11t-pro-5g-37349.webp"
+                },
+                {
+                    "id": 43,
+                    "nume": "Poco F3 GT",
+                    "brand": "Poco",
+                    "pret": 799,
+                    "pret-vechi": 1899,
+                    "scor": 4.7,
+                    "sistem": "Android",
+                    "stoc": true,
+                    "imagine": "https://www.notebookcheck-ru.com/uploads/tx_nbc2/XiaomiPocoF3GT.jpg"
+                },
+                {
+                    "id": 44,
+                    "nume": "OPPO A96",
+                    "brand": "OPPO",
+                    "pret": 329,
+                    "pret-vechi": 1899,
+                    "scor": 4.4,
+                    "sistem": "Android",
+                    "stoc": true,
+                    "imagine": "https://cdn.uno.md/storage/images/Product/450471/info/8.webp?v=1657142434"
+                },
+                {
+                    "id": 45,
+                    "nume": "Honor 80 Pro",
+                    "brand": "Honor",
+                    "pret": 599,
+                    "pret-vechi": 1899,
+                    "scor": 4.6,
+                    "sistem": "Android",
+                    "stoc": false,
+                    "imagine": "https://cdn-files.kimovil.com/default/0008/05/thumb_704976_default_big.jpg"
+                },
+                {
+                    "id": 46,
+                    "nume": "Motorola Moto G73",
+                    "brand": "Motorola",
+                    "pret": 549,
+                    "pret-vechi": 1899,
+                    "scor": 4.5,
+                    "sistem": "Android",
+                    "stoc": true,
+                    "imagine": "https://gorilla.md/wp-content/uploads/2023/07/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA-%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0-2023-08-03-120442.jpg"
+                },
+                {
+                    "id": 47,
+                    "nume": "Nokia X20",
+                    "brand": "Nokia",
+                    "pret": 499,
+                    "pret-vechi": 1899,
+                    "scor": 4.3,
+                    "sistem": "Android",
+                    "stoc": true,
+                    "imagine": "https://enter.online/images/product/2023/08/enter-nokia-x20-5g-13920.webp"
+                },
+                {
+                    "id": 48,
+                    "nume": "Realme GT Master Edition",
+                    "brand": "Realme",
+                    "pret": 699,
+                    "pret-vechi": 1899,
+                    "scor": 4.6,
+                    "sistem": "Android",
+                    "stoc": false,
+                    "imagine": "https://skymarket.ua/image/cache/catalog/telefony/2E/smartfon-realme-gt-master-edition-8-256gb-voyager-grey-(eu)141-800x800.jpg"
+                },
+                {
+                    "id": 49,
+                    "nume": "Apple iPhone 11 Pro",
+                    "brand": "Apple",
+                    "pret": 799,
+                    "pret-vechi": 1899,
+                    "scor": 4.7,
+                    "sistem": "iOS",
+                    "stoc": true,
+                    "imagine": "https://myphone.kg/cache/files/7667.jpg_w800_h800_resize.jpg?t=1748257726"
+                },
+                {
+                    "id": 50,
+                    "nume": "Samsung Galaxy S20 FE",
+                    "brand": "Samsung",
+                    "pret": 599,
+                    "pret-vechi": 1899,
+                    "scor": 4.6,
+                    "sistem": "Android",
+                    "stoc": true,
+                    "imagine": "https://cdn-ultra.esempla.com/storage/webp/5c5292b6-91e7-4c40-bbd3-5b85ab0d71df.webp"
+                },
+                    {
+                        "id": 51,
+                        "nume": "Samsung Galaxy A34 5G",
+                        "brand": "Samsung",
+                        "pret": 449,
+                        "pret-vechi": 1899,
+                        "scor": 4.5,
+                        "sistem": "Android",
+                        "stoc": true,
+                        "imagine": "https://prime-pc.md/files/products/800f00gh.800x600wn.jpg?1901e83005c43825767c17c533f46fd9"
+                    },
+                    {
+                        "id": 52,
+                        "nume": "Xiaomi Note 11 Pro+",
+                        "brand": "Xiaomi",
+                        "pret": 549,
+                        "pret-vechi": 1899,
+                        "scor": 4.6,
+                        "sistem": "Android",
+                        "stoc": false,
+                        "imagine": "https://i.simpalsmedia.com/marketplace/products/original/afb2c2b92f1be34b5dd7f0b223d511de.jpg"
+                    },
+                    {
+                        "id": 53,
+                        "nume": "Poco M5",
+                        "brand": "Poco",
+                        "pret": 299,
+                        "pret-vechi": 1899,
+                        "scor": 4.4,
+                        "sistem": "Android",
+                        "stoc": true,
+                        "imagine": "https://bomba.md/public/products/54/accentelectronic90354/NO_COLOR/1.jpg"
+                    },
+                    {
+                        "id": 54,
+                        "nume": "OPPO Find X3 Neo",
+                        "brand": "OPPO",
+                        "pret": 899,
+                        "pret-vechi": 1899,
+                        "scor": 4.7,
+                        "sistem": "Android",
+                        "stoc": true,
+                        "imagine": "https://www.dxomark.com/wp-content/uploads/drafts/post-86327/Oppo-Find-X3-Neo-featured-image.jpg"
+                    },
+                    {
+                        "id": 55,
+                        "nume": "Honor X7",
+                        "brand": "Honor",
+                        "pret": 399,
+                        "pret-vechi": 1899,
+                        "scor": 4.5,
+                        "sistem": "Android",
+                        "stoc": false,
+                        "imagine": "https://mtscdn.ru/upload/iblock/caf/1.png"
+                    },
+                    {
+                        "id": 56,
+                        "nume": "Motorola Moto G200",
+                        "brand": "Motorola",
+                        "pret": 699,
+                        "pret-vechi": 1899,
+                        "scor": 4.6,
+                        "sistem": "Android",
+                        "stoc": true,
+                        "imagine": "https://cdn.benchmark.pl/uploads/products/13802/motorola%20g200.jpg"
+                    },
+                    {
+                        "id": 57,
+                        "nume": "Nokia 5.4",
+                        "brand": "Nokia",
+                        "pret": 299,
+                        "pret-vechi": 1899,
+                        "scor": 4.3,
+                        "sistem": "Android",
+                        "stoc": true,
+                        "imagine": "https://bemol.vtexassets.com/arquivos/ids/176356-800-800?v=638537000302000000&width=800&height=800&aspect=true"
+                    },
+                    {
+                        "id": 58,
+                        "nume": "Realme Narzo 50 Pro",
+                        "brand": "Realme",
+                        "pret": 449,
+                        "pret-vechi": 1899,
+                        "scor": 4.4,
+                        "sistem": "Android",
+                        "stoc": false,
+                        "imagine": "https://telefonon.ru/wp-content/uploads/2022/05/realme-narzo-50-pro...png"
+                    },
+                    {
+                        "id": 59,
+                        "nume": "Apple iPhone 11",
+                        "brand": "Apple",
+                        "pret": 649,
+                        "pret-vechi": 1899,
+                        "scor": 4.7,
+                        "sistem": "iOS",
+                        "stoc": true,
+                        "imagine": "https://alo.md/media/media/apple-iphone-11-08-vnn06mg.webp"
+                    },
+                    {
+                        "id": 60,
+                        "nume": "Samsung Galaxy S21 FE",
+                        "brand": "Samsung",
+                        "pret": 699,
+                        "pret-vechi": 1899,
+                        "scor": 4.6,
+                        "sistem": "Android",
+                        "stoc": true,
+                        "imagine": "https://img.tiraet.com/img/origin/85037_1.jpg"
+                    },
+                            {
+                                "id": 61,
+                                "nume": "Samsung Galaxy M14 5G",
+                                "brand": "Samsung",
+                                "pret": 449,
+                                "pret-vechi": 1899,
+                                "scor": 4.5,
+                                "sistem": "Android",
+                                "stoc": true,
+                                "imagine": "https://i.simpalsmedia.com/thumbor/500x0/i.simpalsmedia.com/marketplace/products/original/0d76e6a1b0babbc16cd71bfee821c8d6.jpg"
+                            },
+                            {
+                                "id": 62,
+                                "nume": "Xiaomi Black Shark 5 Pro",
+                                "brand": "Xiaomi",
+                                "pret": 899,
+                                "pret-vechi": 1899,
+                                "scor": 4.7,
+                                "sistem": "Android",
+                                "stoc": false,
+                                "imagine": "https://cdn-ultra.esempla.com/storage/webp/502d3bc0-a2e9-47a0-abeb-35e9514d5a88.webp"
+                            },
+                            {
+                                "id": 63,
+                                "nume": "Poco C40",
+                                "brand": "Poco",
+                                "pret": 299,
+                                "pret-vechi": 1899,
+                                "scor": 4.4,
+                                "sistem": "Android",
+                                "stoc": true,
+                                "imagine": "https://geek.md/image/catalog/products/18114-G/Xiaomi%20Poco%20C40,%20Coral%20Green,%201650x720,%204GB64GB,%20EU%20(20).webp"
+                            },
+                            {
+                                "id": 64,
+                                "nume": "OPPO Reno 7",
+                                "brand": "OPPO",
+                                "pret": 549,
+                                "pret-vechi": 1899,
+                                "scor": 4.6,
+                                "sistem": "Android",
+                                "stoc": false,
+                                "imagine": "https://i.simpalsmedia.com/marketplace/products/original/d9239bdea5b43ecd1cab6d2fc893cf19.jpg"
+                            },
+                            {
+                                "id": 65,
+                                "nume": "Honor Magic 4 Lite",
+                                "brand": "Honor",
+                                "pret": 479,
+                                "pret-vechi": 1899,
+                                "scor": 4.5,
+                                "sistem": "Android",
+                                "stoc": true,
+                                "imagine": "https://cdn2.cybermall.ru/images/products/003/213/198/big/30105155_1.jpg"
+                            },
+                            {
+                                "id": 66,
+                                "nume": "Motorola Edge 60 Pro",
+                                "brand": "Motorola",
+                                "pret": 749,
+                                "pret-vechi": 1899,
+                                "scor": 4.7,
+                                "sistem": "Android",
+                                "stoc": false,
+                                "imagine": "https://p1-ofp.static.pub//fes/cms/2025/05/07/c1qobr9v7g879a462t7mricrg4agrf993521.png"
+                            },
+                            {
+                                "id": 67,
+                                "nume": "Nokia 8.3 5G",
+                                "brand": "Nokia",
+                                "pret": 599,
+                                "pret-vechi": 1899,
+                                "scor": 4.5,
+                                "sistem": "Android",
+                                "stoc": true,
+                                "imagine": "https://images.ctfassets.net/wcfotm6rrl7u/12hVmTabVOfaZX2orFYnwn/7317299d96cf5c43dfbfe8491bbf7016/nokia-8_3_5G-polar_night-front_back-int.png"
+                            },
+                            {
+                                "id": 68,
+                                "nume": "Realme GT Neo 2",
+                                "brand": "Realme",
+                                "pret": 649,
+                                "pret-vechi": 1899,
+                                "scor": 4.6,
+                                "sistem": "Android",
+                                "stoc": true,
+                                "imagine": "https://atehno.md/files/items/realme-gt-neo-2-5g-dual-9359844615873.jpg"
+                            },
+                            {
+                                "id": 69,
+                                "nume": "Apple iPhone 12 Mini",
+                                "brand": "Apple",
+                                "pret": 699,
+                                "pret-vechi": 1899,
+                                "scor": 4.7,
+                                "sistem": "iOS",
+                                "stoc": false,
+                                "imagine": "https://xstore.md/images/product/2021/08/Apple-iPhone-12-mini-White-1-xstore.jpg"
+                            },
+                            {
+                                "id": 70,
+                                "nume": "Samsung Galaxy S10 Lite",
+                                "brand": "Samsung",
+                                "pret": 549,
+                                "pret-vechi": 1899,
+                                "scor": 4.6,
+                                "sistem": "Android",
+                                "stoc": true,
+                                "imagine": "https://cdn.uno.md/storage/images/Product/93608/info/77461579579250.webp?v=1592840467"
+                            },
+                                {
+                                    "id": 71,
+                                    "nume": "Samsung Galaxy A14 5G",
+                                    "brand": "Samsung",
+                                    "pret": 399,
+                                    "pret-vechi": 1899,
+                                    "scor": 4.5,
+                                    "sistem": "Android",
+                                    "stoc": true,
+                                    "imagine": "https://img.tiraet.com/img/origin/84205_1.jpg"
+                                },
+                                {
+                                    "id": 72,
+                                    "nume": "Xiaomi Redmi 9A",
+                                    "brand": "Xiaomi",
+                                    "pret": 199,
+                                    "pret-vechi": 1899,
+                                    "scor": 4.3,
+                                    "sistem": "Android",
+                                    "stoc": false,
+                                    "imagine": "https://enter.online/images/product/2023/08/enter-xiaomi-redmi-9a-4g-96948.webp"
+                                },
+                                {
+                                    "id": 73,
+                                    "nume": "Poco X4 GT",
+                                    "brand": "Poco",
+                                    "pret": 749,
+                                    "pret-vechi": 1899,
+                                    "scor": 4.6,
+                                    "sistem": "Android",
+                                    "stoc": true,
+                                    "imagine": "https://cdn.pandashop.md/i/?i=/i/products/131/1318718.jpg&w=1220&h=1220"
+                                },
+                                {
+                                    "id": 74,
+                                    "nume": "OPPO A77",
+                                    "brand": "OPPO",
+                                    "pret": 329,
+                                    "pret-vechi": 1899,
+                                    "scor": 4.4,
+                                    "sistem": "Android",
+                                    "stoc": true,
+                                    "imagine": "https://www.pandashop.md/i/products/131/1318412.jpg"
+                                },
+                                {
+                                    "id": 75,
+                                    "nume": "Honor Play 40",
+                                    "brand": "Honor",
+                                    "pret": 499,
+                                    "pret-vechi": 1899,
+                                    "scor": 4.5,
+                                    "sistem": "Android",
+                                    "stoc": false,
+                                    "imagine": "https://www.techspecs.info/_next/image/?url=https%3A%2F%2Fwww.techspecs.info%2Fuploads%2FHonor_Play_40_Specifcation_c510b33d91.jpg&w=3840&q=75"
+                                },
+                                {
+                                    "id": 76,
+                                    "nume": "Motorola Moto E32",
+                                    "brand": "Motorola",
+                                    "pret": 299,
+                                    "pret-vechi": 1899,
+                                    "scor": 4.3,
+                                    "sistem": "Android",
+                                    "stoc": true,
+                                    "imagine": "https://cdn.kalvo.com/uploads/img/gallery/motorola-moto-e32-india-1.jpg"
+                                },
+                                {
+                                    "id": 77,
+                                    "nume": "Nokia X30 5G",
+                                    "brand": "Nokia",
+                                    "pret": 699,
+                                    "pret-vechi": 1899,
+                                    "scor": 4.6,
+                                    "sistem": "Android",
+                                    "stoc": false,
+                                    "imagine": "https://www.smart.md/image/cache/data/1Anna/2Anna/nokia-x30-dual-sim-5g-6gb-ram-128gb-ice-white-536x536.webp"
+                                },
+                                {
+                                    "id": 78,
+                                    "nume": "Realme GT 2 Pro",
+                                    "brand": "Realme",
+                                    "pret": 799,
+                                    "pret-vechi": 1899,
+                                    "scor": 4.7,
+                                    "sistem": "Android",
+                                    "stoc": true,
+                                    "imagine": "https://atehno.md/files/items/realme-gt-2-pro-5g-dual-sim-8gb-ram-128gb-paper-green-eu-9359844910657.jpg"
+                                },
+                                {
+                                    "id": 79,
+                                    "nume": "Apple iPhone 13 Pro",
+                                    "brand": "Apple",
+                                    "pret": 949,
+                                    "pret-vechi": 1899,
+                                    "scor": 4.8,
+                                    "sistem": "iOS",
+                                    "stoc": true,
+                                    "imagine": "https://iphone15.md/media/media/apple-iphone-13-pro-max-silver-1.webp"
+                                },
+                                {
+                                    "id": 80,
+                                    "nume": "Samsung Galaxy A53",
+                                    "brand": "Samsung",
+                                    "pret": 599,
+                                    "pret-vechi": 1899,
+                                    "scor": 4.6,
+                                    "sistem": "Android",
+                                    "stoc": true,
+                                    "imagine": "https://cdn-ultra.esempla.com/storage/webp/da7851c1-9510-43fd-a69d-98b1212222ac.webp"
+                                },
+                                    {
+                                        "id": 81,
+                                        "nume": "Samsung Galaxy A04s",
+                                        "brand": "Samsung",
+                                        "pret": 249,
+                                        "pret-vechi": 1899,
+                                        "scor": 4.3,
+                                        "sistem": "Android",
+                                        "stoc": true,
+                                        "imagine": "https://e.cdnmoldcell.md/products/6012918/samsung-galaxy-a04s-black-1.jpg"
+                                    },
+                                    {
+                                        "id": 82,
+                                        "nume": "Xiaomi Mi 11 Ultra",
+                                        "brand": "Xiaomi",
+                                        "pret": 899,
+                                        "pret-vechi": 1899,
+                                        "scor": 4.7,
+                                        "sistem": "Android",
+                                        "stoc": false,
+                                        "imagine": "https://www.pandashop.md/i/products/140/1408746.jpg"
+                                    },
+                                    {
+                                        "id": 83,
+                                        "nume": "Poco X3 Pro",
+                                        "brand": "Poco",
+                                        "pret": 449,
+                                        "pret-vechi": 1899,
+                                        "scor": 4.5,
+                                        "sistem": "Android",
+                                        "stoc": true,
+                                        "imagine": "https://cdn.new-brz.net/app/public/models/POCOX3-6-64SHG/small/j/210629160014837142.jpg"
+                                    },
+                                    {
+                                        "id": 84,
+                                        "nume": "OPPO Reno 6",
+                                        "brand": "OPPO",
+                                        "pret": 799,
+                                        "pret-vechi": 1899,
+                                        "scor": 4.6,
+                                        "sistem": "Android",
+                                        "stoc": false,
+                                        "imagine": "https://enter.online/images/product/2023/08/enter-oppo-reno-6-5g-28494.webp"
+                                    },
+                                    {
+                                        "id": 85,
+                                        "nume": "Honor 50 Lite",
+                                        "brand": "Honor",
+                                        "pret": 449,
+                                        "pret-vechi": 1899,
+                                        "scor": 4.4,
+                                        "sistem": "Android",
+                                        "stoc": true,
+                                        "imagine": "https://www.sp-computer.ru/upload/iblock/d6a/5c06vlt68izzum3mmvren24mt4eogh0p.jpg"
+                                    },
+                                    {
+                                        "id": 86,
+                                        "nume": "Motorola Moto G62",
+                                        "brand": "Motorola",
+                                        "pret": 549,
+                                        "pret-vechi": 1899,
+                                        "scor": 4.5,
+                                        "sistem": "Android",
+                                        "stoc": false,
+                                        "imagine": "https://i.simpalsmedia.com/marketplace/products/original/9182f2ef14d0675f837e147cefec8564.jpg"
+                                    },
+                                    {
+                                        "id": 87,
+                                        "nume": "Nokia 7.2",
+                                        "brand": "Nokia",
+                                        "pret": 399,
+                                        "pret-vechi": 1899,
+                                        "scor": 4.3,
+                                        "sistem": "Android",
+                                        "stoc": true,
+                                        "imagine": "https://www.dxomark.com/wp-content/uploads/medias/post-38664/nokia-7-2.jpg"
+                                    },
+                                    {
+                                        "id": 88,
+                                        "nume": "Realme X50 Pro",
+                                        "brand": "Realme",
+                                        "pret": 649,
+                                        "pret-vechi": 1899,
+                                        "scor": 4.6,
+                                        "sistem": "Android",
+                                        "stoc": true,
+                                        "imagine": "https://www.cactus.md/i.ashx?i=/i/products/26/131693.jpg&w=790"
+                                    },
+                                    {
+                                        "id": 89,
+                                        "nume": "Apple iPhone 14",
+                                        "brand": "Apple",
+                                        "pret": 799,
+                                        "pret-vechi": 1899,
+                                        "scor": 4.8,
+                                        "sistem": "iOS",
+                                        "stoc": false,
+                                        "imagine": "https://cdn-ultra.esempla.com/storage/webp/e07db839-2714-4d2f-a2a6-a3db5638e1f9.webp"
+                                    },
+                                    {
+                                        "id": 90,
+                                        "nume": "Samsung Galaxy M23",
+                                        "brand": "Samsung",
+                                        "pret": 499,
+                                        "pret-vechi": 1899,
+                                        "scor": 4.5,
+                                        "sistem": "Android",
+                                        "stoc": true,
+                                        "imagine": "https://cdn-ultra.esempla.com/storage/webp/5e447f8d-7fb4-45d1-bc30-946f9681315b.webp"
+                                    },
+                                        {
+                                            "id": 91,
+                                            "nume": "Samsung Galaxy A24 5G",
+                                            "brand": "Samsung",
+                                            "pret": 399,
+                                            "pret-vechi": 1899,
+                                            "scor": 4.5,
+                                            "sistem": "Android",
+                                            "stoc": true,
+                                            "imagine": "https://api.technodom.kz/f3/api/v1/images/800/800/smartfon_gsm_samsung_sm_a245flgvskz_thx_65_50_4_galaxy_a24_128gb_green_271777_1.jpg"
+                                        },
+                                        {
+                                            "id": 92,
+                                            "nume": "Xiaomi Redmi 10C",
+                                            "brand": "Xiaomi",
+                                            "pret": 299,
+                                            "pret-vechi": 1899,
+                                            "scor": 4.4,
+                                            "sistem": "Android",
+                                            "stoc": false,
+                                            "imagine": "https://cdn-files.kimovil.com/default/0007/16/thumb_615487_default_big.jpg"
+                                        },
+                                        {
+                                            "id": 93,
+                                            "nume": "Poco M3 Pro 5G",
+                                            "brand": "Poco",
+                                            "pret": 349,
+                                            "pret-vechi": 1899,
+                                            "scor": 4.5,
+                                            "sistem": "Android",
+                                            "stoc": true,
+                                            "imagine": "https://cdn.new-brz.net/app/public/models/POCOM3PRO5G-6128PYL/large/w/220818160055060828.webp"
+                                        },
+                                        {
+                                            "id": 94,
+                                            "nume": "OPPO Reno 5",
+                                            "brand": "OPPO",
+                                            "pret": 799,
+                                            "pret-vechi": 1899,
+                                            "scor": 4.6,
+                                            "sistem": "Android",
+                                            "stoc": false,
+                                            "imagine": "https://i.simpalsmedia.com/marketplace/products/original/c1c816f4976691f821be772dfb5784ef.jpg"
+                                        },
+                                        {
+                                            "id": 95,
+                                            "nume": "Honor 60",
+                                            "brand": "Honor",
+                                            "pret": 599,
+                                            "pret-vechi": 1899,
+                                            "scor": 4.5,
+                                            "sistem": "Android",
+                                            "stoc": true,
+                                            "imagine": "https://vk.smarfony.ru/wp-content/uploads/2022/02/honor-60-se...png.webp"
+                                        },
+                                        {
+                                            "id": 96,
+                                            "nume": "Motorola Moto G100",
+                                            "brand": "Motorola",
+                                            "pret": 799,
+                                            "pret-vechi": 1899,
+                                            "scor": 4.7,
+                                            "sistem": "Android",
+                                            "stoc": false,
+                                            "imagine": "https://ua-motorola.com/i/product/450/6061dc12989b5.png"
+                                        },
+                                        {
+                                            "id": 97,
+                                            "nume": "Nokia C10",
+                                            "brand": "Nokia",
+                                            "pret": 199,
+                                            "pret-vechi": 1899,
+                                            "scor": 4.3,
+                                            "sistem": "Android",
+                                            "stoc": true,
+                                            "imagine": "https://m.media-amazon.com/images/I/81LrJ-Q-TgS.jpg"
+                                        },
+                                        {
+                                            "id": 98,
+                                            "nume": "Realme 8 Pro",
+                                            "brand": "Realme",
+                                            "pret": 599,
+                                            "pret-vechi": 1899,
+                                            "scor": 4.6,
+                                            "sistem": "Android",
+                                            "stoc": true,
+                                            "imagine": "https://prod-api.mediaexpert.pl/api/images/gallery/thumbnails/images/28/2893773/Smartfon-REALME-8-Pro-8-128GB-Czarny-front-tyl__1.jpg"
+                                        },
+                                        {
+                                            "id": 99,
+                                            "nume": "Apple iPhone 14 Plus",
+                                            "brand": "Apple",
+                                            "pret": 899,
+                                            "pret-vechi": 1899,
+                                            "scor": 4.8,
+                                            "sistem": "iOS",
+                                            "stoc": false,
+                                            "imagine": "https://hi-tech.md/images/thumbnails/1710/1260/detailed/287/unnamed_vfat-zy_l5mo-yt.jpg"
+                                        },
+                                        {
+                                            "id": 100,
+                                            "nume": "Samsung Galaxy Z Fold3",
+                                            "brand": "Samsung",
+                                            "pret": 1299,
+                                            "pret-vechi": 1899,
+                                            "scor": 4.7,
+                                            "sistem": "Android",
+                                            "stoc": true,
+                                            "imagine": "https://www.cactus.md/i.ashx?i=/i/products/addit/21/109374.jpg&w=790"
+                                        }
+                                    ]
+
+
+
+
+
+
+function addToCart(button) {
+  const id = button.getAttribute("data-id");
+  const name = button.getAttribute("data-name");
+  const price = parseFloat(button.getAttribute("data-price"));
+  const image = button.getAttribute("data-image");
+
+  const product = { id, name, price, image, quantity: 1 };
+
+  // Obține coșul curent din localStorage
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  // Verifică dacă produsul este deja în coș
+  const existingProduct = cart.find(item => item.id === id);
+
+  if (existingProduct) {
+    existingProduct.quantity += 1;
+  } else {
+    cart.push(product);
+  }
+
+  // Salvează coșul actualizat
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  // Confirmare opțională
+  alert(`${name} a fost adăugat în coș.`);
+}
+
+</script>
+
+</body>
+</html>

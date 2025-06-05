@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acasă</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+        .search-bar {
+            width: 280px;
+        }
+        .nav-item{
+        color: #8B8B8B;
+        }
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .nav-icons a {
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+        }
+        .language{
+            display: flex;
+        flex-direction: column;
+        }
+        .language .fw-bold{
+            background-color: transparent;
+            border: none;
+        }
+        
+
+
+        .under-header {
+    background-color: #2e2e2e;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 350px;
+    color: #bfbfbf;
+    font-size: 16px;
+  }
+
+  .separator {
+    width: 1px;
+    height: 25px;
+    background-color: #bfbfbf;
+  }
+
+  .under-header p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+
+
+        .hero-section{
+            background: linear-gradient(to left, #000000, #000000, #000000, #2A3131);
+            display: flex;
+            width: auto;
+            height: 750px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .image-container{
+            padding-top: 150px;
+            width: 50%;
+            height: auto;
+            overflow: hidden;
+        }
+        
+        .image-container img{
+            width: 70%;
+            height: 600px;
+            object-fit: cover;
+        }
+        .slogan{
+            align-items: left;
+            justify-content: left;
+            text-align: left;
+        }
+        .slogan1{
+            font-weight: bold;
+            color: #fff;
+            font-size: 35px;
+        }
+        .slogan3{
+            font-weight: lighter;
+            color: #fff;
+            font-size: 18px;
+        }
+        .slogan2{
+            font-weight: bold;
+            color: #fff;
+            font-size: 96px;
+        }
+        .slogan button{
+            background-color: transparent;
+            border-radius: 6px;
+            width: 198px;
+            height: 56px;
+            color: #fff;
+            border-color: #fff;
+        }
+
+
+        .category{
+            height: 350px;
+            padding-top: 50px;
+            background-color: #FAFAFA;
+        }
+
+        .category .btn{
+            width: 625px;
+            height: 128px;
+            font-size: 16px;
+            background-color: #ededed;
+            color: #000000;
+            border: none;
+        }
+        .category .container{
+            padding-top: 30px;
+            display: flex;
+        }
+
+
+
+        .produse-populare {
+    background-color: #fff; 
+    text-align: center;
+    padding: 60px 0;
+}
+
+.samsung-galaxy {
+    background-color: #EAEAEA; 
+    text-align: center;
+    padding: 60px 0;
+}
+
+.ipad-pro {
+    background-color: #F9F9F9;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.btn-primary {
+    background-color: transparent;
+    border-color: #000;
+    color: #000;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+.card-img {
+    width: 375px;
+    height: 385px; 
+    object-fit: cover; 
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.tag{
+        font-weight: bold;
+        font-size: 24px;
+        margin-top: 15px;
+    }
+   
+
+
+        .tags{
+            display: flex;
+            gap: 20px;
+        }
+
+        .tag {
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.tag.selected {
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+.promotion{
+    margin-bottom: 50px;
+}
+
+        .promotion .btn{
+            background-color: #000000;
+            color:#ededed;
+            border: none; 
+        }
+
+
+        .row1, .row2{
+            display: flex;
+            text-align: center;
+        }
+        .row1 .btn, .row2 .btn{
+            background-color: #000000;
+            color: #fff;
+            border-color: #000000;
+        }
+        .products .container{
+            gap: 20px;
+        }
+       
+.wishlist {
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+.card {
+    width: 18rem;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.card-img-top {
+    object-fit: cover;
+    width: 100%;
+}
+.option{
+    margin-top: 50px;
+}
+
+
+
+
+
+        footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+
+
+@media (max-width: 1024px) {
+    .search-bar {
+        width: 200px; 
+    }
+    .nav {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .nav-item {
+        margin: 0 5px; 
+    }
+    .nav-icons {
+        gap: 10px; 
+    }
+    .under-header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+    }
+    .separator {
+        display: none; 
+    }
+    .hero-section {
+        flex-direction: column;
+        height: auto;
+        padding: 50px 20px;
+    }
+    .slogan {
+        text-align: center; 
+        margin-bottom: 30px;
+    }
+    .slogan1 {
+        font-size: 30px;
+    }
+    .slogan2 {
+        font-size: 70px;
+    }
+    .slogan3 {
+        font-size: 16px;
+    }
+    .image-container {
+        width: 80%;
+        padding-top: 0;
+    }
+    .image-container img {
+        width: 100%;
+        height: auto;
+        max-height: 400px; 
+    }
+    .category .container {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .category .btn {
+        width: 90%; 
+        margin-bottom: 15px; 
+    }
+    .products .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .row1, .row2 {
+        flex-direction: column; 
+        gap: 20px; 
+        width: 100%;
+        align-items: center;
+    }
+    .col-3 {
+        width: 100%;
+        max-width: 300px; 
+    }
+    .card {
+        width: 100% !important;
+        height: auto;
+    }
+    .option {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .produse-populare,
+    .samsung-galaxy,
+    .ipad-pro {
+        width: 90%;
+        margin-bottom: 30px; 
+        padding: 30px 0;
+    }
+    .card-img {
+        width: 80%;
+        height: auto;
+        max-height: 250px;
+    }
+    .promotion .row {
+        flex-direction: column; 
+        align-items: center;
+    }
+    footer .row {
+        flex-direction: column; 
+        text-align: center;
+    }
+    footer .col-md-4,
+    footer .col-md-3 {
+        margin-bottom: 30px; 
+    }
+    footer .d-flex.gap-3 {
+        justify-content: center; 
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column; 
+        align-items: center;
+        padding: 0 10px;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .search-bar {
+        width: 90%; 
+        margin-bottom: 10px;
+    }
+    .nav {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .nav-item {
+        width: 100%;
+    }
+    .nav-link {
+        padding: 5px 0;
+    }
+    .nav-icons {
+        margin-top: 10px;
+        justify-content: center; 
+        gap: 8px;
+    }
+    .under-header {
+        flex-direction: column; 
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+        font-size: 14px; 
+    }
+    .under-header .separator {
+        display: none;
+    }
+
+    footer .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .col-md-4,
+    footer .col-md-3 {
+        margin-bottom: 20px;
+    }
+    footer .d-flex.gap-3 {
+        justify-content: center; 
+    }
+    footer .col-md-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .d-flex.align-items-center.mb-3 {
+        justify-content: center; 
+    }
+
+
+
+    .slogan1 {
+        font-size: 24px;
+    }
+    .slogan2 {
+        font-size: 50px;
+    }
+    .slogan3 {
+        font-size: 14px;
+    }
+    .slogan button {
+        width: 150px;
+        height: 45px;
+        font-size: 14px;
+    }
+    .tags {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .tag {
+        font-size: 18px;
+    }
+    .card-text {
+        font-size: 14px; 
+    }
+    .card-title {
+        font-size: 18px; 
+    }
+    .btn-primary {
+        width: 120px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            
+            <div class="logo">
+                <img src="https://i.pinimg.com/736x/fe/e3/0a/fee30ae2f127eaea8a5f1d01d80a5b78.jpg" alt="">
+                <h1 class="name text-black">gadGet</h1>
+            </div>
+            
+            <div class="input-group search-bar">
+                <input type="text" class="form-control" 
+                data-lang-ro-placeholder="Caută..." 
+                data-lang-fr-placeholder="Rechercher..." 
+                placeholder="Caută...">
+                     </div>
+            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-black" href="#" data-lang-ro="Acasă" data-lang-fr="Accueil"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Catalog" data-lang-fr="Catalogue" onclick="window.location.href='Pagină Produse.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Despre" data-lang-fr="À propos" onclick="window.location.href='Despre.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Contactează-ne" data-lang-fr="Contactez-nous" onclick="window.location.href='Contactează-ne.html'"></a></li>
+                  </ul>
+            </nav>
+            
+            <div class="nav-icons">
+                <a href="#"><i class="bi bi-heart" onclick="window.location.href='Wishlist.html'"></i></a>
+                <a href="#"><i class="bi bi-cart" onclick="window.location.href='Coş de Cumpărături.html'"></i></a>
+                <a href="#"><i class="bi bi-person" onclick="window.location.href='Înregistrează-te.html'"></i></a>
+                <div class="language">
+                    <button onclick="setLanguage('ro')" class="fw-bold">RO</button>
+                    <button onclick="setLanguage('fr')" class="fw-bold">FR</button>
+                  </div>
+                  
+            </div>
+        </div>
+    </header>
+
+    <!-- Under Header -->
+    <section class="under-header">
+        <p data-lang-ro="Telefoane" data-lang-fr="Téléphones"><i class="bi bi-phone"></i></p>
+        <div class="separator"></div>
+        <p data-lang-ro="Tablete" data-lang-fr="Tablettes"><i class="bi bi-tablet"></i></p>
+      </section>
+
+
+
+     <!-- Hero section -->
+     <section class="hero-section">
+        <div class="slogan">
+            <p class="slogan1" data-lang-ro="Pro. Mai departe. Mai bine." data-lang-fr="Pro. Plus loin. Mieux."></p>
+            <p class="slogan2">iPhone 16 <span>Pro</span></p>
+            <div>
+                <p class="slogan3" data-lang-ro="Putere și rafinament într-un singur dispozitiv." data-lang-fr="Puissance et raffinement dans un seul appareil."></p>
+                <p class="slogan3" data-lang-ro="iPhone 16 Pro – mai mult decât un smartphone." data-lang-fr="iPhone 16 Pro – plus qu’un smartphone."></p>
+            </div>
+            <button data-lang-ro="Vezi Oferta" data-lang-fr="Voir l'offre" onclick="window.location.href='Eroare.html'"></button>
+        </div>
+    
+        <div class="image-container">
+            <img src="https://i.pinimg.com/736x/89/b7/7a/89b77ae8be7ce2433a3861ebefe50de6.jpg" alt="iPhone 16 Pro">
+        </div>
+    </section>
+    
+
+    
+
+
+    <!-- Category -->
+    <section class="category text-center my-4">
+        <h3 data-lang-ro="Caută După Categorie" data-lang-fr="Rechercher par catégorie"></h3>
+        <div class="container">
+        <button class="btn btn-success" data-lang-ro="Tablete" data-lang-fr="Tablettes" onclick="window.location.href='Eroare.html'"><img src="" alt=""></button>
+        <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-white"></div>  
+        <button class="btn btn-success" data-lang-ro="Telefoane" data-lang-fr="Téléphones" onclick="window.location.href='Catalog.html'"><img src="" alt=""></button>
+        </div>
+    </section>
+
+
+    <!-- Products -->
+    <section class="products">
+        <section class="container">
+            <div class="tags">
+                <p class="tag produs-nou selected" onclick="selectTag(this)" data-lang-ro="Produse Noi" data-lang-fr="Nouveaux Produits"></p>
+                <p class="tag" onclick="selectTag(this)" data-lang-ro="Top Vânzări" data-lang-fr="Meilleures Ventes"></p>
+                <p class="tag" onclick="selectTag(this)" data-lang-ro="Recomandările Noastre" data-lang-fr="Nos Recommandations"></p>
+            </div>
+            
+        <div class="row1">
+            <div class="col-3">
+                <div class="card" style="width: 18rem;"  data-id="p1">
+                    <span class="wishlist" onclick="addToWishlist('id-produs')"><i class="fa fa-heart"></i></span>
+                    <img src="https://i.simpalsmedia.com/marketplace/products/original/5d7fb67dba32df8d2e41899efc1a25fb.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" data-lang-ro="Apple iPhone 14 Pro Max 128GB Auriu (MQ9T3RX/A)" data-lang-fr="Apple iPhone 14 Pro Max 128GB Doré (MQ9T3RX/A)"></p>
+                      <h5 class="card-title">$1900</h5>
+                      <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;"  data-id="p2">
+                    <span class="wishlist" onclick="addToWishlist('id-produs')"><i class="fa fa-heart"></i></span>
+                    <img src="https://phonesrugged.nl/wp-content/uploads/2023/04/Tab-15.1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" data-lang-ro="Tabletă Blackview Tab 16 Pro Gri Nightfall" data-lang-fr="Tablette Blackview Tab 16 Pro Gris Nuit"></p>
+                      <h5 class="card-title">$2535</h5>
+                      <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;"  data-id="p3">
+                    <span class="wishlist" onclick="addToWishlist('id-produs')"><i class="fa fa-heart"></i></span>
+                    <img src="https://s13emagst.akamaized.net/products/82514/82513033/images/res_2fb9f3f0553d2208544f5f78cc56cb98.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" data-lang-ro="Tabletă Blackview Tab 60 Gri Iron" data-lang-fr="Tablette Blackview Tab 60 Gris Iron"></p>
+                      <h5 class="card-title">$2399</h5>
+                      <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;"  data-id="p4">
+                    <span class="wishlist" onclick="addToWishlist('id-produs')"><i class="fa fa-heart"></i></span>
+                    <img src="https://m.media-amazon.com/images/I/51m4Ss9f3JL.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" data-lang-ro="Apple iPhone 13 128GB Verde" data-lang-fr="Apple iPhone 13 128GB Vert"></p>
+                      <h5 class="card-title">$1549</h5>
+                      <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+
+
+        <div class="row2">
+            <div class="col-3">
+                <div class="card" style="width: 18rem;"  data-id="p5">
+                    <span class="wishlist" onclick="addToWishlist('id-produs')"><i class="fa fa-heart"></i></span>
+                    <img src="https://gorilla.md/wp-content/uploads/2023/10/111.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" data-lang-ro="Tabletă Samsung Galaxy Tab S9 FE LTE culoare Mentă" data-lang-fr="Tablette Samsung Galaxy Tab S9 FE LTE couleur menthe"></p>
+                      <h5 class="card-title">$3690</h5>
+                      <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;"  data-id="p6">
+                    <span class="wishlist" onclick="addToWishlist('id-produs')"><i class="fa fa-heart"></i></span>
+                    <img src="https://d.scdn.gr/images/sku_images/063125/63125452/20220811092939_8f8b7e6c.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" data-lang-ro="Galaxy Z Fold5 deblocat 256GB culoare Negru Elegant" data-lang-fr="Galaxy Z Fold5 débloqué 256 Go couleur Noir Élégant"></p>
+                      <h5 class="card-title">$1799</h5>
+                      <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;"  data-id="p7">
+                    <span class="wishlist" onclick="addToWishlist('id-produs')"><i class="fa fa-heart"></i></span>
+                    <img src="https://www.oppo.com/content/dam/oppo/common/mkt/v2-2/reno13-series/navigation/reno13-5g/white-440-440.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" data-lang-ro="Oppo Reno 13 5G 256Gb Alb" data-lang-fr="Oppo Reno 13 5G 256Gb Blanc"></p>
+                      <h5 class="card-title">$1999</h5>
+                      <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;"  data-id="p8">
+                    <span class="wishlist" onclick="addToWishlist('id-produs')"><i class="fa fa-heart"></i></span>
+                    <img src="https://i.ebayimg.com/images/g/r~8AAOSwNAxm21SK/s-l1200.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" data-lang-ro="Apple iPad 9 10.2” 64GB model MK2L3 anul 2021" data-lang-fr="Apple iPad 9 10.” 64GB modèle MK2L3 année 2021"></p>
+                      <h5 class="card-title">$3980</h5>
+                      <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+
+
+    </section>
+    </section>
+
+
+    <!-- option -->
+     <section class="option d-flex">
+    <section class="produse-populare">
+        <div class="container-fluid">
+            <img src="https://cdn.new-brz.net/app/public/models/SM-F731BLIGSEK/large/w/240221110053967140.webp" class="card-img" alt="">
+            <h2 data-lang-ro="Produse Populare" data-lang-fr="Produits Populaires"></h2>
+            <p data-lang-ro="Descoperă cele mai apreciate produse de către clienții noștri." data-lang-fr="Découvrez les produits les plus appréciés par nos clients."></p>
+            <a href="#" class="btn btn-primary" data-lang-ro="Vezi Oferta" data-lang-fr="Voir l'offre" onclick="window.location.href='Eroare.html'"></a>
+        </div>
+    </section>
+    
+    <section class="samsung-galaxy">
+        <div class="container-fluid">
+            <img src="https://alo.md/media/mediasamsung-galaxy-z-fold-6-pink.webp" class="card-img" alt="">
+            <h2>Samsung Galaxy</h2>
+            <p data-lang-ro="Samsung Galaxy Z Fold este un smartphone revoluționar cu ecran pliabil Dynamic AMOLED, ideal pentru multitasking avansat."
+            data-lang-fr="Le Samsung Galaxy Z Fold est un smartphone révolutionnaire doté d'un écran Dynamic AMOLED pliable, idéal pour le multitâche avancé."></p>
+            <a href="#" class="btn btn-primary" data-lang-ro="Vezi Oferta" data-lang-fr="Voir l'offre" onclick="window.location.href='Eroare.html'"></a>
+        </div>
+    </section>
+    
+    <section class="ipad-pro">
+        <div class="container-fluid">
+            <img src="https://m.media-amazon.com/images/I/71hA1Sf1TnL._AC_SL1500_.jpg" class="card-img" alt="">
+            <h2>iPad Pro</h2>
+            <p data-lang-ro="iPad Pro oferă un ecran Retina Liquid de înaltă rezoluție, performanță impresionantă datorită chipului Apple M."
+            data-lang-fr="L'iPad Pro offre un écran Liquid Retina haute résolution, des performances impressionnantes grâce à la puce Apple M."></p>
+            <a href="#" class="btn btn-primary" data-lang-ro="Vezi Oferta" data-lang-fr="Voir l'offre" onclick="window.location.href='Eroare.html'"></a>
+        </div>
+    </section>
+</section>
+    
+
+
+
+
+    <!-- Promotion -->
+    <section class="promotion">
+     <div class="container">
+        <div class="tags">
+            <p class="tag" data-lang-ro="Reduceri de până la -50%" data-lang-fr="Des réductions jusqu'à -50%"></p>
+            </div>
+        <div class="row text-center">
+            <div class="col-3">
+                <div class="card" style="width: 18rem;"  data-id="p9">
+                    <span class="wishlist" onclick="addToWishlist('id-produs')"><i class="fa fa-heart"></i></span>
+                    <img src="https://i.simpalsmedia.com/marketplace/products/original/5d7fb67dba32df8d2e41899efc1a25fb.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" data-lang-ro="Apple iPhone 14 Pro 512GB Auriu (MQ233)" data-lang-fr="Apple iPhone 14 Pro 512GB Doré (MQ233)"></p>
+                      <h5 class="card-title">$1599</h5>
+                      <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;"  data-id="p10">
+                    <span class="wishlist" onclick="addToWishlist('id-produs')"><i class="fa fa-heart"></i></span>
+                    <img src="https://aiwa-int.com.au/cdn/shop/files/888796_AW-PPEACH_frontandback_1000x1000_ae33dd43-325b-4447-8470-342ae5bf74d0.png?v=1737459525&width=1445" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" data-lang-ro="AIWA 10.1’’ Wifi Tabletă Pro (AW-PCHAR/AW-PPEACH)" data-lang-fr="AIWA 10.1’’ Wifi Tablette Pro (AW-PCHAR/AW-PPEACH)"></p>
+                      <h5 class="card-title">$1437</h5>
+                      <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;"  data-id="p11">
+                    <span class="wishlist" onclick="addToWishlist('id-produs')"><i class="fa fa-heart"></i></span>
+                    <img src="https://i.simpalsmedia.com/marketplace/products/original/1d51ed2ff634bb64e50bb628ccd97169.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" data-lang-ro="Tabletă Apple iPad 2021 10.2” Wi-Fi Gri" data-lang-fr="Tablette Apple iPad 2021 10.2” Wi-Fi Gris"></p>
+                      <h5 class="card-title">$1339</h5>
+                      <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="col-3">
+                <div class="card" style="width: 18rem;"  data-id="p12">
+                    <span class="wishlist" onclick="addToWishlist('id-produs')"><i class="fa fa-heart"></i></span>
+                    <img src="https://i.simpalsmedia.com/marketplace/products/original/4c6f3f8966604a932aa5e84a32f0f32f.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text" data-lang-ro="Apple iPhone 14 Pro 1TB Gri (MQ2V3)" data-lang-fr="Apple iPhone 14 Pro 1TB Gris (MQ2V3)"></p>
+                      <h5 class="card-title">$1499</h5>
+                      <a href="#" class="btn btn-primary" data-lang-ro="Cumpără Acum" data-lang-fr="Acheter maintenant" onclick="window.location.href='Pasul 1.html'"></a>
+                    </div>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+    </section>
+
+
+
+
+<!-- footer -->
+<footer class="bg-black text-white py-5">
+    <div class="container">
+        <div class="row justify-content-between align-items-start">
+            <div class="col-md-4 mb-4">
+                <div class="d-flex align-items-center mb-3">
+                    <img src="https://i.pinimg.com/736x/86/a9/94/86a9946861d76198d479423669a341a5.jpg" alt="Logo" width="30" class="me-2">
+                    <h4 class="m-0 fw-bold" data-lang-ro="gadGet" data-lang-fr="gadGet"></h4>
+                </div>
+                <p data-lang-ro="Suntem un magazin online specializat în telefoane și tablete. Oferim produse originale, livrare rapidă și suport de încredere pentru fiecare client." 
+                   data-lang-fr="Nous sommes une boutique en ligne spécialisée dans les téléphones et tablettes. Nous offrons des produits originaux, une livraison rapide et un support fiable pour chaque client.">
+                </p>
+                <div class="contact">
+                    <h4 data-lang-ro="Contacte" data-lang-fr="Contacts"></h4>
+                    <p data-lang-ro="Telefon: +373 (68) 296602" data-lang-fr="Téléphone: +373 (68) 296602"></p>
+                    <p>Email: contact@7cyber.com</p>
+                </div>
+                <div class="d-flex gap-3 mt-3">
+                    <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-tiktok fs-5"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-bold" data-lang-ro="Servicii" data-lang-fr="Services"></h5>
+                <ul class="list-unstyled mt-3">
+                    <li data-lang-ro="Oferte speciale și reduceri" data-lang-fr="Offres spéciales et réductions"></li>
+                    <li data-lang-ro="Carduri cadou electronice" data-lang-fr="Cartes cadeaux électroniques"></li>
+                    <li data-lang-ro="Finanțare în rate fără dobândă" data-lang-fr="Financement en plusieurs fois sans intérêt"></li>
+                    <li data-lang-ro="Garanție extinsă și service autorizat" data-lang-fr="Garantie étendue et service agréé"></li>
+                    <li data-lang-ro="Facturare online și cont client" data-lang-fr="Facturation en ligne et compte client"></li>
+                    <li data-lang-ro="Metode multiple de plată" data-lang-fr="Modes de paiement multiples"></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold" data-lang-ro="Asistență pentru clienți" data-lang-fr="Assistance client"></h5>
+                <ul class="list-unstyled mt-3">
+                    <li data-lang-ro="Urmărirea comenzii" data-lang-fr="Suivi de commande"></li>
+                    <li data-lang-ro="Informații despre livrare" data-lang-fr="Informations sur la livraison"></li>
+                    <li data-lang-ro="Politica de retur și schimb" data-lang-fr="Politique de retour et d’échange"></li>
+                    <li data-lang-ro="Garanția produselor" data-lang-fr="Garantie des produits"></li>
+                    <li data-lang-ro="Întrebări frecvente (FAQ)" data-lang-fr="FAQ (Foire Aux Questions)"></li>
+                    <li data-lang-ro="Termeni și condiții de utilizare a site-ului" data-lang-fr="Conditions générales d’utilisation du site"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // 1.ro/fr
+function setLanguage(lang) {
+const elements = document.querySelectorAll('[data-lang-ro]');
+elements.forEach(el => {
+  el.textContent = el.getAttribute(`data-lang-${lang}`);
+});
+
+const inputElements = document.querySelectorAll('[data-lang-ro-placeholder]');
+inputElements.forEach(input => {
+  input.placeholder = input.getAttribute(`data-lang-${lang}-placeholder`);
+});
+
+localStorage.setItem('lang', lang); // Salvăm limba aleasă
+}
+
+// Setăm limba salvată (default: ro)
+document.addEventListener("DOMContentLoaded", () => {
+const savedLang = localStorage.getItem('lang') || 'ro';
+setLanguage(savedLang);
+});
+
+// 2. tag
+function selectTag(element) {
+    document.querySelectorAll(".tag").forEach(tag => tag.classList.remove("selected"));
+    element.classList.add("selected");
+}
+// 3. wishlist
+document.addEventListener('DOMContentLoaded', () => {
+    const wishlistButtons = document.querySelectorAll('.wishlist');
+
+    wishlistButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            const productCard = button.closest('.card');
+
+            if (productCard) {
+                const id = productCard.getAttribute('data-id');
+
+                const nameElement = productCard.querySelector('.card-text');
+                const name = nameElement ? nameElement.innerText.trim() : 'Nume necunoscut'; 
+
+                const priceElement = productCard.querySelector('.card-title');
+                const price = priceElement ? priceElement.innerText.trim() : 'Preț necunoscut'; 
+
+                const imageElement = productCard.querySelector('.card-img-top');
+                const image = imageElement ? imageElement.src : 'https://via.placeholder.com/150?text=Imagine+Lipsa'; 
+
+
+                let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+                const exists = wishlist.find(item => item.id === id);
+
+                if (!exists) {
+                    wishlist.push({ id, name, price, image });
+                    localStorage.setItem('wishlist', JSON.stringify(wishlist));
+                    alert('Produs adăugat la favorite!');
+                } else {
+                    alert('Acest produs este deja în favorite.');
+                }
+            } else {
+                console.error('Eroare: Nu s-a găsit cardul produsului.');
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>

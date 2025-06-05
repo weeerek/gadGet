@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coş de Cumpărături</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+       
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+        .search-bar {
+            width: 280px;
+        }
+        .nav-item{
+        color: #8B8B8B;
+        }
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .nav-icons a {
+            font-size: 20px;
+            color: black;
+            text-decoration: none;
+        }
+        .language{
+            display: flex;
+        flex-direction: column;
+        }
+        .language .fw-bold{
+            background-color: transparent;
+            border: none;
+        }
+        
+
+
+        .under-header {
+    background-color: #2e2e2e;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 350px;
+    color: #bfbfbf;
+    font-size: 16px;
+  }
+
+  .separator {
+    width: 1px;
+    height: 25px;
+    background-color: #bfbfbf;
+  }
+
+  .under-header p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+
+
+  .cart img {
+  border-radius: 8px;
+}
+
+.cart .btn-outline-light {
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.cart .bi-x-lg {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.p-4 .btn-dark{
+  background-color: #000;
+  width: 100px;
+  height: 50px;
+  border-radius: 6px;
+}
+
+
+
+  footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+    .search-bar {
+        width: 200px; 
+    }
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    .nav-link {
+        padding: 8px 10px;
+    }
+    .nav-icons {
+        gap: 10px;
+    }
+    .under-header {
+        flex-direction: column; 
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+    }
+    .under-header .separator {
+        display: none; 
+    }
+    
+    nav ul.nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .cart .row {
+    flex-direction: column;
+  }
+
+  .col-lg-7,
+  .col-lg-5 {
+    width: 100% !important;
+  }
+
+  .p-4 .btn-dark {
+    width: 100%;
+  }
+
+    footer .col-md-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center; 
+    }
+    footer .d-flex.align-items-center.mb-3 {
+        justify-content: center; 
+    }
+}
+
+
+
+
+
+@media (max-width: 767px) {
+    .container {
+        flex-direction: column; 
+        align-items: center;
+        padding: 0 10px;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .search-bar {
+        width: 90%; 
+        margin-bottom: 10px;
+    }
+    .nav {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .nav-item {
+        width: 100%;
+    }
+    .nav-link {
+        padding: 5px 0;
+    }
+    .nav-icons {
+        margin-top: 10px;
+        justify-content: center; 
+        gap: 8px;
+    }
+    .under-header {
+        flex-direction: column; 
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+        font-size: 14px; 
+    }
+    .under-header .separator {
+        display: none;
+    }
+    .p-4 {
+    padding: 1rem !important;
+  }
+    footer .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .col-md-4,
+    footer .col-md-3 {
+        margin-bottom: 20px;
+    }
+    footer .d-flex.gap-3 {
+        justify-content: center; 
+    }
+    footer .col-md-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    footer .d-flex.align-items-center.mb-3 {
+        justify-content: center; 
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-white py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            
+          <div class="logo">
+            <img src="https://i.pinimg.com/736x/fe/e3/0a/fee30ae2f127eaea8a5f1d01d80a5b78.jpg" alt="">
+            <h1 class="name text-black">gadGet</h1>
+        </div>
+            
+            <div class="input-group search-bar">
+                <input type="text" class="form-control" 
+                data-lang-ro-placeholder="Caută..." 
+                data-lang-fr-placeholder="Rechercher..." 
+                placeholder="Caută...">
+                     </div>
+            
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Acasă" data-lang-fr="Accueil" onclick="window.location.href='index.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Catalog" data-lang-fr="Catalogue" onclick="window.location.href='Pagină Produse.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Despre" data-lang-fr="À propos" onclick="window.location.href='Despre.html'"></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" data-lang-ro="Contactează-ne" data-lang-fr="Contactez-nous" onclick="window.location.href='Contactează-ne.html'"></a></li>
+                  </ul>
+            </nav>
+            
+            <div class="nav-icons">
+                <a href="#"><i class="bi bi-heart" onclick="window.location.href='Wishlist.html'"></i></a>
+                <a href="#"><i class="bi bi-cart" onclick="window.location.href='Coş de Cumpărături.html'"></i></a>
+                <a href="#"><i class="bi bi-person" onclick="window.location.href='Înregistrează-te.html'"></i></a>
+                <div class="language">
+                    <button onclick="setLanguage('ro')" class="fw-bold">RO</button>
+                    <button onclick="setLanguage('fr')" class="fw-bold">FR</button>
+                  </div>
+                  
+            </div>
+        </div>
+    </header>
+
+    <!-- Under Header -->
+    <section class="under-header">
+        <p data-lang-ro="Telefoane" data-lang-fr="Téléphones"><i class="bi bi-phone"></i></p>
+        <div class="separator"></div>
+        <p data-lang-ro="Tablete" data-lang-fr="Tablettes"><i class="bi bi-tablet"></i></p>
+      </section>
+
+
+
+
+<!-- cart -->
+<section class="cart py-5">
+    <div class="container">
+      <div class="row g-5">
+  
+        <!-- Coș de cumpărături -->
+        <div class="col-lg-7">
+          <h4 class="fw-bold mb-4" data-lang-ro="Coș de Cumpărături" data-lang-fr="Panier"></h4>
+          <div id="cart-items">
+            <!-- Produsele vor fi injectate aici prin JavaScript -->
+          </div>
+          <p id="empty-cart-message" class="text-muted" data-lang-ro="Coșul este gol." data-lang-fr="Le panier est vide."></p>
+          <button class="btn btn-danger mt-3" onclick="clearCart()" data-lang-ro="Golește Coșul" data-lang-fr="Vider le panier"></button>
+        </div>
+  
+        <!-- Rezumatul comenzii -->
+        <div class="col-lg-5">
+          <div class="p-4 bg-white shadow-sm rounded-3 border">
+            <h5 class="fw-bold mb-4" data-lang-ro="Rezumatul Comenzii" data-lang-fr="Résumé de la commande"></h5>
+  
+            <label class="form-label" data-lang-ro="Cod de reducere/Cod Promoțional" data-lang-fr="Code de réduction/Code promotionnel"></label>
+            <input type="text" class="form-control mb-3" data-lang-ro-placeholder="Cod" data-lang-fr-placeholder="Code" placeholder="Cod">
+  
+            <label class="form-label" data-lang-ro="Numărul cardului dvs. bonus" data-lang-fr="Votre bonus de numéro de carte"></label>
+            <div class="input-group mb-4">
+              <input type="text" class="form-control" data-lang-ro-placeholder="Introduceți numărul cardului" data-lang-fr-placeholder="Entrez le numéro de carte" placeholder="Introduceți numărul cardului">
+              <button class="btn btn-outline-dark" type="button" onclick="validateCardNumber()" data-lang-ro="Aplică" data-lang-fr="Appliquer"></button>
+            </div>
+  
+            <div class="d-flex justify-content-between">
+              <span data-lang-ro="Subtotal" data-lang-fr="Subtotal"></span>
+              <span id="subtotal">$0</span>
+            </div>
+            <div class="d-flex justify-content-between">
+              <span data-lang-ro="Taxa estimată" data-lang-fr="Frais estimés"></span>
+              <span id="tax">$0</span>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+              <span data-lang-ro="Livrare și manipulare estimate" data-lang-fr="Livraison et manutention estimées"></span>
+              <span id="shipping">$0</span>
+            </div>
+            <div class="d-flex justify-content-between fw-bold fs-5 mb-4">
+              <span data-lang-ro="Total" data-lang-fr="Total"></span>
+              <span id="total">$0</span>
+            </div>
+  
+            <button class="btn-dark w-100 text-white" id="checkout-btn" data-lang-ro="Finalizează" data-lang-fr="Finalise" onclick="window.location.href='Pasul 1.html'"></button>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+
+
+<!-- footer -->
+  <footer class="bg-black text-white py-5">
+    <div class="container">
+        <div class="row justify-content-between align-items-start">
+            <div class="col-md-4 mb-4">
+              <div class="d-flex align-items-center mb-3">
+                <img src="https://i.pinimg.com/736x/86/a9/94/86a9946861d76198d479423669a341a5.jpg" alt="Logo" width="30" class="me-2">
+                <h4 class="m-0 fw-bold" data-lang-ro="gadGet" data-lang-fr="gadGet"></h4>
+            </div>
+                <p data-lang-ro="Suntem un magazin online specializat în telefoane și tablete. Oferim produse originale, livrare rapidă și suport de încredere pentru fiecare client." 
+                   data-lang-fr="Nous sommes une boutique en ligne spécialisée dans les téléphones et tablettes. Nous offrons des produits originaux, une livraison rapide et un support fiable pour chaque client.">
+                </p>
+                <div class="contact">
+                  <h4 data-lang-ro="Contacte" data-lang-fr="Contacts"></h4>
+                  <p data-lang-ro="Telefon: +373 (68) 296602" data-lang-fr="Téléphone: +373 (68) 296602"></p>
+                  <p>Email: contact@7cyber.com</p>
+              </div>
+                <div class="d-flex gap-3 mt-3">
+                    <a href="#" class="text-white"><i class="bi bi-twitter fs-5"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-tiktok fs-5"></i></a>
+                    <a href="#" class="text-white"><i class="bi bi-instagram fs-5"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-bold" data-lang-ro="Servicii" data-lang-fr="Services"></h5>
+                <ul class="list-unstyled mt-3">
+                    <li data-lang-ro="Oferte speciale și reduceri" data-lang-fr="Offres spéciales et réductions"></li>
+                    <li data-lang-ro="Carduri cadou electronice" data-lang-fr="Cartes cadeaux électroniques"></li>
+                    <li data-lang-ro="Finanțare în rate fără dobândă" data-lang-fr="Financement en plusieurs fois sans intérêt"></li>
+                    <li data-lang-ro="Garanție extinsă și service autorizat" data-lang-fr="Garantie étendue et service agréé"></li>
+                    <li data-lang-ro="Facturare online și cont client" data-lang-fr="Facturation en ligne et compte client"></li>
+                    <li data-lang-ro="Metode multiple de plată" data-lang-fr="Modes de paiement multiples"></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <h5 class="fw-bold" data-lang-ro="Asistență pentru clienți" data-lang-fr="Assistance client"></h5>
+                <ul class="list-unstyled mt-3">
+                    <li data-lang-ro="Urmărirea comenzii" data-lang-fr="Suivi de commande"></li>
+                    <li data-lang-ro="Informații despre livrare" data-lang-fr="Informations sur la livraison"></li>
+                    <li data-lang-ro="Politica de retur și schimb" data-lang-fr="Politique de retour et d’échange"></li>
+                    <li data-lang-ro="Garanția produselor" data-lang-fr="Garantie des produits"></li>
+                    <li data-lang-ro="Întrebări frecvente (FAQ)" data-lang-fr="FAQ (Foire Aux Questions)"></li>
+                    <li data-lang-ro="Termeni și condiții de utilizare a site-ului" data-lang-fr="Conditions générales d’utilisation du site"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // 1.ro/fr
+function setLanguage(lang) {
+const elements = document.querySelectorAll('[data-lang-ro]');
+elements.forEach(el => {
+  el.textContent = el.getAttribute(`data-lang-${lang}`);
+});
+
+const inputElements = document.querySelectorAll('[data-lang-ro-placeholder]');
+inputElements.forEach(input => {
+  input.placeholder = input.getAttribute(`data-lang-${lang}-placeholder`);
+});
+
+localStorage.setItem('lang', lang); 
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+const savedLang = localStorage.getItem('lang') || 'ro';
+setLanguage(savedLang);
+});
+
+
+
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// 2. produsele in cos
+document.addEventListener("DOMContentLoaded", function () {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartContainer = document.getElementById("cart-items");
+        const emptyMessage = document.getElementById("empty-cart-message");
+
+        if (cart.length === 0) {
+            emptyMessage.style.display = "block"; 
+        } else {
+            emptyMessage.style.display = "none"; 
+            cart.forEach(product => {
+                const productHTML = `
+                    <div class="cart-item d-flex align-items-center mb-3">
+                        <img src="${product.image}" alt="${product.name}" style="width: 80px; height: 80px;">
+                        <div class="ms-3">
+                            <h5>${product.name}</h5>
+                            <p>Preț: $${product.price} | Cantitate: ${product.quantity}</p>
+                        </div>
+                    </div>
+                `;
+                cartContainer.innerHTML += productHTML;
+            });
+        }
+    });
+
+    function clearCart() {
+        localStorage.removeItem("cart");
+        location.reload(); 
+    }
+// 3.
+function validateCardNumber() {
+    const cardInput = document.querySelector("[placeholder='Introduceți numărul cardului']").value.trim();
+
+    if (!cardInput) {
+        alert("Nu ați introdus numărul cardului!");
+        return;
+    }
+
+    alert("Card aplicat cu succes!");
+}
+
+
+</script>
+
+</body>
+</html>
